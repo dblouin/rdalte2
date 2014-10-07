@@ -1,0 +1,280 @@
+@namespace(uri="http://www.open-people.fr/rdal2", prefix="rdal")
+package rdal;
+
+import "platform:/plugin/fr.labsticc.framework.settings.model/model/settings.ecore";
+import "platform:/plugin/fr.labsticc.framework.constraints.model/model/constraints.ecore";
+
+abstract class IdentifiedElement {
+  attr String name;
+  id attr String[1] ~id;
+  attr String description;
+}
+
+abstract class Node extends IdentifiedElement {
+
+  @union
+  ref Node[*]#parent children;
+  ref Node#children parent;
+  attr Ratio weight;
+}
+
+abstract class RefinementNode extends Node {
+}
+
+@gmf.node(label="name", figure="ellipse", phantom="true")
+class RequirementRefinementNode extends RefinementNode {
+
+  @subsets
+  ref AbstractRequirement[+] subRequirements;
+}
+
+@gmf.node(label="name", figure="ellipse", phantom="true")
+class GoalRefinementNode extends RefinementNode {
+
+  @subsets
+  ref Goal[+] subGoals;
+}
+
+@gmf.node(label="name")
+abstract class AbstractContractualElement extends IdentifiedElement {
+  @gmf.link(target.decoration="arrow", style="dash", color="0,0,0")
+  ref Stakeholder[*]#contractualElements stakeholders;
+  val ReferencedDesignElements designElements;
+  val Rationale[+]#contract ownedRationales;
+  @gmf.link(target.decoration="arrow", style="dash", color="0,0,0")
+  ref Contact[*] contactInformation;
+  attr Date originDate;
+  attr Date scheduleDate;
+  attr String[*] sources;
+}
+
+@gmf.node(label="name")
+class Contact extends IdentifiedElement {
+  attr String address;
+  attr String email;
+  attr String phoneNumber;
+  attr String country;
+}
+
+class Stakeholder extends Contact {
+  ref AbstractContractualElement[+]#stakeholders contractualElements;
+}
+
+@gmf.node(label = "name")
+class Rationale extends IdentifiedElement {
+  ref AbstractContractualElement[1]#ownedRationales contract;
+  ref Stakeholder[+] stakeholders;
+}
+
+datatype Date : java.util.Date;
+
+abstract class ContractualElement extends AbstractContractualElement {
+  val constraints.Expression[1] ownedExpression;
+  val constraints.Expression ownedCondition;
+  ref ContractualElement[*] derivedFrom;
+  ref settings.Category category;
+  attr boolean[1] dropped;
+  ref Rationale[*] droppingReasons;
+  ref ContractualElement[*] evolvedTo;
+  val Uncertainty[1] changeUncertainty;
+  attr Ratio priority;
+}
+
+@gmf.node(label = "name")
+class Uncertainty extends IdentifiedElement {
+  attr Ratio[1] volatility;
+  attr PositiveFactor[1] costsImpact;
+  attr PositiveFactor[1] scheduleImpact;
+  attr Ratio[1] timeCriticality;
+  attr Ratio[1] precedence;
+  volatile transient derived attr Ratio riskIndex;
+  volatile transient derived attr Ratio propRiskIndex;
+  volatile transient derived attr Ratio maturityIndex;
+}
+
+@Ecore(constraints="rangeZeroOne")
+datatype Ratio : java.lang.Float;
+
+datatype PositiveFactor : java.lang.Float;
+
+abstract class SatisfiableElement {
+  attr Ratio satisfactionLevel;
+}
+
+abstract class VerifiableElement {
+  attr Boolean verified;
+}
+
+@gmf.diagram()
+class Specification extends AbstractContractualElement, Node, VerifiableElement, SatisfiableElement {
+
+  val RdalOrgPackage[+]#specification ownedPackages;
+  val Contact[+] ownedContacts;
+  val VerificationActivity[*] ownedVerificationActivities;
+  val Conflict[*] ownedConflicts;
+  val SystemOverview[1] ownedSystOverview;
+  ref constraints.ConstraintLanguagesSpec[1] constraintLanguagesSpec;
+  val ActorReference[+] ownedActors;
+  ref EObject[*] primaryActors;
+  attr String version;
+}
+
+@gmf.node(label="name")
+abstract class RdalOrgPackage extends Node {
+  ref Specification[1]#ownedPackages specification;
+}
+
+@gmf.node(tool.name="Requirements Package")
+class RequirementsPackage extends RdalOrgPackage, SatisfiableElement, VerifiableElement {
+  @gmf.compartment()
+  val AbstractRequirement[+]#~package ownedRequirements;
+  val RequirementRefinementNode[*] ownedRefinementNodes;
+}
+
+@gmf.node(tool.name="Goals Package")
+class GoalsPackage extends RdalOrgPackage, SatisfiableElement {
+  val Goal[+]#~package ownedGoals;
+  val GoalRefinementNode[*] ownedRefinementNodes;
+}
+
+class SystemOverview extends AbstractContractualElement {
+  val Capability[+] ownedCapabilities;
+  ref EObject[1] globalSystem;
+  ref EObject[1] systemToBe;
+  val SystemContext[+]#systemOverview ownedContexts;
+  val Variable[+] ownedSystemBoundary;
+  attr String[1] purpose;
+}
+
+class Capability extends IdentifiedElement {
+}
+
+class SystemContext extends AbstractContractualElement {
+  ref EObject[1] globalSystemContext;
+  ref Variable[+] systemContextBoundary;
+  ref ActorReference[*] actors;
+  ref SystemOverview#ownedContexts systemOverview;
+}
+
+class Variable extends IdentifiedElement {
+  ref EObject[1] designVariable;
+  attr VariableType[1] type;
+}
+
+enum VariableType {
+  Monitored = 0;
+  Controlled = 1;
+}
+
+@gmf.node(label="name")
+class ActorReference extends IdentifiedElement {
+  ref EObject[+] referencedActors;
+}
+
+abstract class RefineableContractualElement extends ContractualElement, Node {
+}
+
+abstract class AbstractRequirement extends RefineableContractualElement, SatisfiableElement, VerifiableElement {
+  @gmf.link(target.decoration="arrow", style="dash")
+  ref VerificationActivity[*]#requirement verifiedBy;
+  attr Ratio risk;
+  ref RequirementsPackage[1]#ownedRequirements ~package;
+
+  @gmf.link(target.decoration="arrow", style="dash")
+  @subsets
+  ref RequirementRefinementNode[*] refinements;
+}
+
+@gmf.node(label="name")
+class VerificationActivity extends IdentifiedElement {
+  attr VerificationMethod verificationMethod = "Test";
+  ref EObject[*] externalRefs;
+  attr boolean[1] passed;
+  ref AbstractRequirement#verifiedBy requirement;
+}
+
+enum VerificationMethod {
+  Analysis = 0;
+  Demonstration = 1;
+  Inspection = 2;
+  Test = 3;
+}
+
+class Requirement extends AbstractRequirement {
+  ref Assumption[*]#imageRequirement imageAssumptions;
+  ref EObject[*] functionUsedIn;
+}
+
+class Assumption extends AbstractRequirement {
+  ref Requirement#imageAssumptions imageRequirement;
+  ref Assumption[*] imageAssumptions;
+}
+
+class Goal extends RefineableContractualElement, SatisfiableElement {
+  ref Conflict[*]#goal conflicts;
+  ref EObject[*] useCases;
+  ref GoalsPackage[1]#ownedGoals ~package;
+
+  @subsets
+  ref GoalRefinementNode[*] refinements;
+}
+
+@gmf.node(label="name")
+class Conflict extends IdentifiedElement {
+  ref Goal[1]#conflicts goal;
+  ref ContractualElement[1] contractualElement;
+  attr Ratio[1] degree;
+}
+
+@Ecore(constraints="designElementsContainedInSpecifedArchSpecs")
+class DesignElementReference extends IdentifiedElement {
+  ref EObject[1] designElement;
+  ref ReferencedDesignElements[1]#ownedDesignElementRefs parent;
+  attr String reason;
+}
+
+class VerifiableDesignElementReference extends DesignElementReference, VerifiableElement {
+}
+
+class SatisfiableDesignElementReference extends DesignElementReference, SatisfiableElement {
+  attr Ratio weight;
+}
+
+class SystOverviewDesignElemRef extends DesignElementReference {
+}
+
+class SystContextDesignElemRef extends DesignElementReference {
+}
+
+abstract class ReferencedDesignElements extends IdentifiedElement {
+  val DesignElementReference[+]#parent ownedDesignElementRefs;
+  attr AggregationType[1] agregationType;
+}
+
+class RefManuallySelectedDesignElements extends ReferencedDesignElements {
+}
+
+class RefQueryCollectedDesignElements extends ReferencedDesignElements {
+  val constraints.FormalLanguageExpression[1] queryExpression;
+}
+
+class Trace extends ReferencedDesignElements {
+  op TraceDesignElementReference modelElementReference(EObject modelElement);
+  ref Specification[*] specifications;
+}
+
+class TraceDesignElementReference extends DesignElementReference, RequirementsCoverageData, VerifiableElement {
+  op void merge(TraceDesignElementReference modelElementReference);
+  attr boolean[1] container;
+}
+
+class RequirementsCoverageData extends IdentifiedElement {
+  attr int nbRequirements;
+  attr Ratio verificationLevel;
+}
+
+enum AggregationType {
+  Composition = 0;
+  Alternative = 1;
+}
+

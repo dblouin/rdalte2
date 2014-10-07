@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.open-people.fr/rdal2"
+            class="fr.openpeople.rdal2.model.rdal.RdalPackage"
+            genModel="model/rdal2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated rdal2 -->
+      <parser
+            type="rdal"
+            class="fr.openpeople.rdal2.model.rdal.util.RdalResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

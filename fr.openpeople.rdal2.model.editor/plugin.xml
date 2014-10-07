@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.openpeople.rdal2.model.rdal.presentation.RdalModelWizardID"
+            name="%_UI_RdalModelWizard_label"
+            class="fr.openpeople.rdal2.model.rdal.presentation.RdalModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RdalModelFile.gif">
+         <description>%_UI_RdalModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="fr.openpeople.rdal2.model.rdal.presentation.RdalEditorID"
+            name="%_UI_RdalEditor_label"
+            icon="icons/full/obj16/RdalModelFile.gif"
+            extensions="rdal"
+            class="fr.openpeople.rdal2.model.rdal.presentation.RdalEditor"
+            contributorClass="fr.openpeople.rdal2.model.rdal.presentation.RdalActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
