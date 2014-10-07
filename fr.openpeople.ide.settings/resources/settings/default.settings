@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<settings:SettingsSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:settings="http://www.lab-sticc.fr/framework/settings" id="rdal_aadl_urn" name="RDAL AADL URN Settings" description="Settings for RDAL, AADL and URN.">
+  <ownedLanguages id="AADL" name="AADL">
+    <packages href="http://aadl.info/AADL/2.0#/"/>
+    <packages href="http://aadl.info/AADL/2.0/instance#/"/>
+    <ownedModelInterface id="fr.openpeople.ide.settings.BasicIdeAadlModelInterface" name="AADL Model Interface" providerId="fr.openpeople.ide.settings" serviceClass="fr.openpeople.ide.settings.BasicIdeAadlModelInterface"/>
+    <fileExtensions>aadl</fileExtensions>
+    <fileExtensions>aaxl2</fileExtensions>
+  </ownedLanguages>
+  <ownedLanguages id="RDAL" name="RDAL" description="">
+    <packages href="http://www.open-people.fr/rdal2#/"/>
+    <ownedLanguageAssociations id="RDAL-URN" name="RDAL-URN" targetLanguage="URN">
+      <ownedPropToTypesAssociations id="Specification.primaryActors" name="Specification.primaryActors">
+        <property href="http://www.open-people.fr/rdal2#//Specification/primaryActors"/>
+        <associatedTypes href="http:///ucm.ecore#//map/ComponentRef"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="ActorReference.referencedActors.urn" name="ActorReference.referencedActors">
+        <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
+        <associatedTypes href="http:///ucm.ecore#//map/ComponentRef"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemFunctionGoal.useCases" name="SystemFunctionGoal.useCases">
+        <property href="http://www.open-people.fr/rdal2#//SystemFunctionGoal/useCases"/>
+        <associatedTypes href="http:///ucm.ecore#//map/UCMmap"/>
+      </ownedPropToTypesAssociations>
+    </ownedLanguageAssociations>
+    <ownedLanguageAssociations id="RDAL-AADL" name="RDAL-AADL" targetLanguage="AADL">
+      <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//AadlPackage"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0/instance#//SystemInstance"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//PropertySet"/>
+        <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Specification ) else self.oclIsKindOf( rdal::Specification ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.designElements.ownedDesignElementRefs.designElement" name="SystemOverview.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//AadlPackage"/>
+        <ownedCondition id="SystemOverview.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Overview" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemOverview ) else self.oclIsKindOf( rdal::SystemOverview ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemContext.designElements.ownedDesignElementRefs.designElement" name="SystemContext.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//AadlPackage"/>
+        <ownedCondition id="SystemContext.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Context" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemContext ) else self.oclIsKindOf( rdal::SystemContext ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Sensitivity.designElements.ownedDesignElementRefs.designElement" name="Sensitivity.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//ComponentClassifier"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//Feature"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0/instance#//ComponentInstance"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0/instance#//FeatureInstance"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//Flow"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//EndToEndFlow"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0/instance#//FlowElementInstance"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//FlowSpecification"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0/instance#//FlowSpecificationInstance"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//FlowElement"/>
+        <ownedCondition id="Sensitivity.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Contractual Element or Sensitivity" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::TextualContractualElement ) or self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Sensitivity ) else self.oclIsKindOf( rdal::TextualContractualElement ) or self.oclIsKindOf( rdal::Sensitivity ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.globalSystem" name="SystemOverview.globalSystem">
+        <property href="http://www.open-people.fr/rdal2#//SystemOverview/globalSystem"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//SystemType"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.systemToBe" name="SystemOverview.systemToBe">
+        <property href="http://www.open-people.fr/rdal2#//SystemOverview/systemToBe"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//SystemType"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemContext.globalSystemContext" name="SystemContext.globalSystemContext">
+        <property href="http://www.open-people.fr/rdal2#//SystemContext/globalSystemContext"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//SystemImplementation"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//Mode"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="ActorReference.referencedActors.aadl" name="ActorReference.referencedActors">
+        <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//AbstractSubcomponent"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Variable.designVariable" name="Variable.designVariable">
+        <property href="http://www.open-people.fr/rdal2#//Variable/designVariable"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//Feature"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="" name="NonFunctionalProperty.designProperty" description="TODO">
+        <property href="http://www.open-people.fr/rdal2#//NonFunctionalProperty/designProperty"/>
+        <associatedTypes href="http://aadl.info/AADL/2.0#//Property"/>
+      </ownedPropToTypesAssociations>
+    </ownedLanguageAssociations>
+    <ownedCategoryAssociations id="category_requirements" name="Requirements Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//Requirement"/>
+      <ownedCategories id="cat_requirement_System_Function" name="System Function"/>
+      <ownedCategories id="cat_requirement_Performance" name="Performance" description="" subCategories="cat_requirement_Safety"/>
+      <ownedCategories id="cat_requirement_Safety" name="Safety" parentCategory="cat_requirement_Performance"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_non_functional_goals" name="Non Functional Goals Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//NonFunctionalGoal"/>
+      <ownedCategories id="cat_non_functional_goal_Performance" name="Performance" subCategories="cat_non_functional_goal_Responsiveness"/>
+      <ownedCategories id="cat_non_functional_goal_Safety" name="Safety"/>
+      <ownedCategories id="cat_non_functional_goal_Responsiveness" name="Responsiveness" parentCategory="cat_non_functional_goal_Performance"/>
+      <ownedCategories id="cat_non_functional_goal_Resource_Consumption" name="Resource Consumption" subCategories="cat_non_functional_goal_Memory_Consumption cat_non_functional_goal_Power_Consumption"/>
+      <ownedCategories id="cat_non_functional_goal_Memory_Consumption" name="Memory Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
+      <ownedCategories id="cat_non_functional_goal_Power_Consumption" name="Power Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_assumptions" name="Assumption Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//Assumption"/>
+      <ownedCategories id="cat_assumption_Technical" name="Technical"/>
+      <ownedCategories id="cat_assumption_Organizational" name="Organizational"/>
+      <ownedCategories id="cat_assumption_Managerial" name="Managerial"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_system_function_goals" name="System Function Goals Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//SystemFunctionGoal"/>
+      <ownedCategories id="cat_system_function_1" name="Category 1" description=""/>
+      <ownedCategories id="cat_system_function_2" name="Category 2"/>
+      <ownedCategories id="cat_system_function_3" name="Category 3"/>
+    </ownedCategoryAssociations>
+    <fileExtensions>rdal</fileExtensions>
+  </ownedLanguages>
+  <ownedLanguages id="URN" name="URN">
+    <packages href="http:///urn.ecore#/"/>
+    <packages href="http:///urncore.ecore#/"/>
+    <fileExtensions>jucm</fileExtensions>
+  </ownedLanguages>
+</settings:SettingsSpecification>
