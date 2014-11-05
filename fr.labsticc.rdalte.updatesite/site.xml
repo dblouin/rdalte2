@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.openpeople.rdalte.sdk_1.1.0.qualifier.jar" id="fr.openpeople.rdalte.sdk" version="1.1.0.qualifier">
+      <category name="RDALTE"/>
+   </feature>
+   <feature url="features/fr.openpeople.rdalte.osate.sdk_1.0.0.qualifier.jar" id="fr.openpeople.rdalte.osate.sdk" version="1.0.0.qualifier">
+      <category name="RDALTE"/>
+   </feature>
+   <feature url="features/fr.openpeople.models.aadl.default_1.0.1.qualifier.jar" id="fr.openpeople.models.aadl.default" version="1.0.1.qualifier">
+      <category name="RDALTE"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.constraints.ocl.sdk_2.1.0.qualifier.jar" id="fr.labsticc.framework.constraints.ocl.sdk" version="2.1.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.emf.sdk_1.0.0.qualifier.jar" id="fr.labsticc.framework.emf.sdk" version="1.0.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.constraints.sdk_2.1.0.qualifier.jar" id="fr.labsticc.framework.constraints.sdk" version="2.1.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.settings.sdk_1.0.0.qualifier.jar" id="fr.labsticc.framework.settings.sdk" version="1.0.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.compatibility.sdk_1.0.0.qualifier.jar" id="fr.labsticc.framework.compatibility.sdk" version="1.0.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.constraints.bless.sdk_1.0.0.qualifier.jar" id="fr.labsticc.framework.constraints.bless.sdk" version="1.0.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.constraints.lute.sdk_1.0.0.qualifier.jar" id="fr.labsticc.framework.constraints.lute.sdk" version="1.0.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <feature url="features/fr.labsticc.framework.sdk_1.1.0.qualifier.jar" id="fr.labsticc.framework.sdk" version="1.1.0.qualifier">
+      <category name="Lab-STICC-SDF"/>
+   </feature>
+   <category-def name="RDALTE" label="RDALTE"/>
+   <category-def name="Lab-STICC-SDF" label="Lab-STICC-SDF">
+      <description>
+         Lab-STICC Software Development Framework
+      </description>
+   </category-def>
+</site>
