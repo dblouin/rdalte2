@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cst:ConstraintLanguagesSpec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" id="5663deb5-f5c5-4a39-a324-8da2b395dd7c">
+  <ownedLanguages xsi:type="cst:NaturalConstraintLanguage" id="fr.labsticc.framework.constraints.core.natural" name="Natural"/>
+  <ownedLanguages xsi:type="cst:FormalConstraintLanguage" id="fr.labsticc.framework.constraints.ocl" name="OCL">
+    <ownedInterpreter id="ocl_int_service" name="OCL Interpreter Service" serviceClass="fr.labsticc.framework.constraints.ocl.service.OCLInterpretationAS" providerId="fr.labsticc.framework.constraints.ocl.service"/>
+    <ownedPersister id="ocl_pers_service" name="OCL Persistence Service" serviceClass="fr.labsticc.framework.constraints.ocl.service.OCLResourcePersistenceAS" providerId="fr.labsticc.framework.constraints.ocl.service"/>
+    <ownedViewer id="ocl_viewer_service" name="OCL Viewer Configuration" serviceClass="fr.labsticc.framework.constraints.ocl.view.OCLViewerConfiguration" providerId="fr.labsticc.framework.constraints.ocl.view"/>
+  </ownedLanguages>
+</cst:ConstraintLanguagesSpec>

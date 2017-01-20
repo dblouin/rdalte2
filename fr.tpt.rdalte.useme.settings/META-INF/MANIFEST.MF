@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RDALTE Settings for USEME
+Bundle-SymbolicName: fr.tpt.rdalte.useme.settings;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: fr.labsticc.framework.constraints.ocl.service,
+ fr.labsticc.framework.constraints.ocl.view

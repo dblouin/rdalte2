@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<settings:SettingsSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:settings="http://www.lab-sticc.fr/framework/settings" id="rdal_aadl_urn" name="RDAL AADL URN Settings" description="Settings for RDAL, USEME and URN.">
+  <ownedLanguages id="usemearch" name="USEME Architecture">
+    <packages href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#/"/>
+    <ownedCategoryAssociations>
+      <property href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//CategorizedElement/category"/>
+      <ownedCategories id="useme_environmental" name="Environmental" description="" subCategories="useme_technical"/>
+      <ownedCategories id="useme_technical" name="Technical" parentCategory="useme_environmental"/>
+      <ownedCategories id="useme_physical" name="Physical"/>
+      <ownedCategories id="useme_social" name="Social"/>
+    </ownedCategoryAssociations>
+    <fileExtensions>usemearch</fileExtensions>
+  </ownedLanguages>
+  <ownedLanguages id="RDAL" name="RDAL" description="">
+    <packages href="http://www.open-people.fr/rdal2#/"/>
+    <ownedLanguageAssociations id="RDAL-URN" name="RDAL-URN" targetLanguage="URN">
+      <ownedPropToTypesAssociations id="Specification.primaryActors" name="Specification.primaryActors">
+        <property href="http://www.open-people.fr/rdal2#//Specification/primaryActors"/>
+        <associatedTypes href="http:///ucm.ecore#//map/ComponentRef"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="ActorReference.referencedActors.urn" name="ActorReference.referencedActors">
+        <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
+        <associatedTypes href="http:///ucm.ecore#//map/ComponentRef"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemFunctionGoal.useCases" name="SystemFunctionGoal.useCases">
+        <property href="http://www.open-people.fr/rdal2#//SystemFunctionGoal/useCases"/>
+        <associatedTypes href="http:///ucm.ecore#//map/UCMmap"/>
+      </ownedPropToTypesAssociations>
+    </ownedLanguageAssociations>
+    <ownedLanguageAssociations id="RDAL-usemearch" name="RDAL-usemearch" description="" targetLanguage="usemearch">
+      <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//DslDevelopmentSpecification"/>
+        <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Specification ) else self.oclIsKindOf( rdal::Specification ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.designElements.ownedDesignElementRefs.designElement" name="SystemOverview.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <ownedCondition id="SystemOverview.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Overview" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemOverview ) else self.oclIsKindOf( rdal::SystemOverview ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemContext.designElements.ownedDesignElementRefs.designElement" name="SystemContext.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <ownedCondition id="SystemContext.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Context" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemContext ) else self.oclIsKindOf( rdal::SystemContext ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Sensitivity.designElements.ownedDesignElementRefs.designElement" name="Sensitivity.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <ownedCondition id="Sensitivity.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Contractual Element or Sensitivity" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::TextualContractualElement ) or self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Sensitivity ) else self.oclIsKindOf( rdal::TextualContractualElement ) or self.oclIsKindOf( rdal::Sensitivity ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.globalSystem" name="SystemOverview.globalSystem">
+        <property href="http://www.open-people.fr/rdal2#//SystemOverview/globalSystem"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemOverview.systemToBe" name="SystemOverview.systemToBe">
+        <property href="http://www.open-people.fr/rdal2#//SystemOverview/systemToBe"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Dsl"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemContext.globalSystemContext" name="SystemContext.globalSystemContext">
+        <property href="http://www.open-people.fr/rdal2#//SystemContext/globalSystemContext"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//DslDevelopmentSpecification"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="ActorReference.referencedActors.aadl" name="ActorReference.referencedActors">
+        <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Variable.designVariable" name="Variable.designVariable">
+        <property href="http://www.open-people.fr/rdal2#//Variable/designVariable"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="" name="NonFunctionalProperty.designProperty" description="TODO">
+        <property href="http://www.open-people.fr/rdal2#//NonFunctionalProperty/designProperty"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+      </ownedPropToTypesAssociations>
+    </ownedLanguageAssociations>
+    <ownedCategoryAssociations id="category_requirements" name="Requirements Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//Requirement"/>
+      <ownedCategories id="cat_requirement_System_Function" name="System Function"/>
+      <ownedCategories id="cat_requirement_Performance" name="Performance" description="" subCategories="cat_requirement_Safety cat_requirement_Usability"/>
+      <ownedCategories id="cat_requirement_Safety" name="Safety" parentCategory="cat_requirement_Performance"/>
+      <ownedCategories id="cat_requirement_Usability" name="Usability" parentCategory="cat_requirement_Performance"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_non_functional_goals" name="Non Functional Goals Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//NonFunctionalGoal"/>
+      <ownedCategories id="cat_non_functional_goal_Performance" name="Performance" subCategories="cat_non_functional_goal_Responsiveness cat_non_functional_goal_Safety cat_non_functional_goal_Resource_Consumption"/>
+      <ownedCategories id="cat_non_functional_goal_Safety" name="Safety" parentCategory="cat_non_functional_goal_Performance"/>
+      <ownedCategories id="cat_non_functional_goal_Responsiveness" name="Responsiveness" parentCategory="cat_non_functional_goal_Performance"/>
+      <ownedCategories id="cat_non_functional_goal_Resource_Consumption" name="Resource Consumption" subCategories="cat_non_functional_goal_Memory_Consumption cat_non_functional_goal_Power_Consumption" parentCategory="cat_non_functional_goal_Performance"/>
+      <ownedCategories id="cat_non_functional_goal_Memory_Consumption" name="Memory Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
+      <ownedCategories id="cat_non_functional_goal_Power_Consumption" name="Power Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_assumptions" name="Assumption Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//Assumption"/>
+      <ownedCategories id="cat_assumption_Technical" name="Technical"/>
+      <ownedCategories id="cat_assumption_Organizational" name="Organizational"/>
+      <ownedCategories id="cat_assumption_Managerial" name="Managerial"/>
+    </ownedCategoryAssociations>
+    <ownedCategoryAssociations id="category_system_function_goals" name="System Function Goals Categories">
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
+      <subclass href="http://www.open-people.fr/rdal2#//SystemFunctionGoal"/>
+      <ownedCategories id="cat_system_function_1" name="Category 1" description=""/>
+      <ownedCategories id="cat_system_function_2" name="Category 2"/>
+      <ownedCategories id="cat_system_function_3" name="Category 3"/>
+    </ownedCategoryAssociations>
+    <fileExtensions>rdal</fileExtensions>
+  </ownedLanguages>
+  <ownedLanguages id="URN" name="URN">
+    <packages href="http:///urn.ecore#/"/>
+    <packages href="http:///urncore.ecore#/"/>
+    <fileExtensions>jucm</fileExtensions>
+  </ownedLanguages>
+</settings:SettingsSpecification>

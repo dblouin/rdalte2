@@ -218,14 +218,14 @@ public class BasicIdeAadlModelInterface extends AbstractAadlModelInterface /*imp
 			final ITextSelection selection = (ITextSelection) p_selection;
 			final XtextEditor editor = (XtextEditor) p_editor;
 			
-			try {
+//			try {
 				final XtextResource resource = (XtextResource) EMFUtil.convertToEMFResource( editor.getResource(), getCustomResourcet() );
 				
 				return eObjectOffsetHelper.resolveElementAt( resource, selection.getOffset() );
-			}
-			catch ( final CoreException p_ex ) {
-				// TODO
-			}
+//			}
+//			catch ( final CoreException p_ex ) {
+//				// TODO
+//			}
 		}
 		
 		return null;
