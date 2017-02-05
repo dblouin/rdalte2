@@ -9,6 +9,7 @@
       <ownedCategories id="useme_physical" name="Physical"/>
       <ownedCategories id="useme_social" name="Social"/>
     </ownedCategoryAssociations>
+    <ownedModelInterface id="fr.tpt.rdalte.useme.settings.UseMeArchModelInterface" name="USEME Archtecture Model Interface" providerId="fr.tpt.rdalte.useme.settings" serviceClass="fr.tpt.rdalte.useme.settings.UseMeArchModelInterface"/>
     <fileExtensions>usemearch</fileExtensions>
   </ownedLanguages>
   <ownedLanguages id="RDAL" name="RDAL" description="">
@@ -25,6 +26,14 @@
       <ownedPropToTypesAssociations id="SystemFunctionGoal.useCases" name="SystemFunctionGoal.useCases">
         <property href="http://www.open-people.fr/rdal2#//SystemFunctionGoal/useCases"/>
         <associatedTypes href="http:///ucm.ecore#//map/UCMmap"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http:///urn.ecore#//URNspec"/>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="RequirementsPackage.functionUsedIn" name="RequirementsPackage.functionUsedIn">
+        <property href="http://www.open-people.fr/rdal2#//Requirement/functionUsedIn"/>
+        <associatedTypes href="http:///urncore.ecore#//Responsibility"/>
       </ownedPropToTypesAssociations>
     </ownedLanguageAssociations>
     <ownedLanguageAssociations id="RDAL-usemearch" name="RDAL-usemearch" description="" targetLanguage="usemearch">
@@ -66,7 +75,7 @@
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemContext.globalSystemContext" name="SystemContext.globalSystemContext">
         <property href="http://www.open-people.fr/rdal2#//SystemContext/globalSystemContext"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//DslDevelopmentSpecification"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//ContextSpecification"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="ActorReference.referencedActors.aadl" name="ActorReference.referencedActors">
         <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
@@ -98,6 +107,7 @@
       <ownedCategories id="cat_non_functional_goal_Resource_Consumption" name="Resource Consumption" subCategories="cat_non_functional_goal_Memory_Consumption cat_non_functional_goal_Power_Consumption" parentCategory="cat_non_functional_goal_Performance"/>
       <ownedCategories id="cat_non_functional_goal_Memory_Consumption" name="Memory Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
       <ownedCategories id="cat_non_functional_goal_Power_Consumption" name="Power Consumption" parentCategory="cat_non_functional_goal_Resource_Consumption"/>
+      <ownedCategories id="cat_non_functional_goal_Usability" name="Usability"/>
     </ownedCategoryAssociations>
     <ownedCategoryAssociations id="category_assumptions" name="Assumption Categories">
       <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
