@@ -18,4 +18,5 @@ Require-Bundle: org.eclipse.core.runtime,
  fr.labsticc.framework.constraints.model.edit;visibility:=reexport,
  fr.labsticc.framework.settings.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Import-Package: fr.labsticc.framework.settings.ide
+Import-Package: fr.labsticc.framework.constraints.ide,
+ fr.labsticc.framework.settings.ide

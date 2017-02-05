@@ -122,6 +122,7 @@ import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
+import fr.labsticc.framework.constraints.ide.ConstraintsIDEPlugin;
 import fr.labsticc.framework.constraints.model.constraints.provider.ConstraintsItemProviderAdapterFactory;
 import fr.labsticc.framework.settings.ide.SettingsPlugin;
 import fr.labsticc.framework.settings.model.settings.provider.SettingsItemProviderAdapterFactory;
@@ -938,8 +939,9 @@ public class RdalEditor
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
 
-		// DB Pre-load the settings model for categories.
+		// DB Pre-load the settings and constraint languages model for categories.
 		editingDomain.getResourceSet().getResource( SettingsPlugin.getDefault().getSpecification().eResource().getURI(), true );
+		editingDomain.getResourceSet().getResource( ConstraintsIDEPlugin.getDefault().getSpecification().eResource().getURI(), true );
 	}
 
 	/**
