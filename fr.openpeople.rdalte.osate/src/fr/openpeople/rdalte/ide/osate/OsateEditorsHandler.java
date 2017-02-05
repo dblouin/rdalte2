@@ -21,8 +21,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.text.ITextSelection;
 import org.eclipse.jface.text.TextSelection;
-import org.eclipse.jface.viewers.IElementComparer;
-import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
@@ -36,28 +34,10 @@ import org.eclipse.xtext.util.ITextRegion;
 import org.osate.aadl2.parsesupport.AObject;
 import org.osate.aadl2.presentation.Aadl2ModelEditor;
 
-import fr.labsticc.framework.emf.core.util.EMFUtil;
+import fr.labsticc.framework.emf.view.ide.EMFEditorUtil;
 import fr.openpeople.rdalte.ide.view.IEditorHandler;
 
-public class CoreEditorHandler implements IEditorHandler {
-
-	private static final IElementComparer uriComparer = new IElementComparer() {
-		
-		@Override
-		public int hashCode(Object element) {
-			return 0;
-		}
-		
-		@Override
-		public boolean equals(	final Object p_object1, 
-								final Object p_object2 ) {
-			if ( p_object1 instanceof EObject && p_object2 instanceof EObject ) {
-				return EMFUtil.equalsByURI( (EObject) p_object1, (EObject) p_object2 );
-			}
-			
-			return false;
-		}
-	};
+public class OsateEditorsHandler implements IEditorHandler {
 	
 	private static final ILocationInFileProvider locFileProvider = new DefaultLocationInFileProvider();
 	
@@ -76,14 +56,14 @@ public class CoreEditorHandler implements IEditorHandler {
 				final IEditorPart editor = IDE.openEditor( window.getActivePage(), file );
 				
 				if ( editor instanceof Aadl2ModelEditor ) {
-					final Aadl2ModelEditor aadlEditor = (Aadl2ModelEditor) editor;
-					final StructuredViewer viewer = (StructuredViewer) aadlEditor.getViewer();
-					final IElementComparer currentComparer = viewer.getComparer();
-					viewer.setComparer( uriComparer );
-					aadlEditor.setSelectionToViewer( Collections.singleton( p_element ) );
-					//editor.gotoAObject( (AObject) p_element );
-					
-					viewer.setComparer( currentComparer );
+					EMFEditorUtil.selectIntoEditor( Collections.singletonList( p_element ), editor );
+//					final Aadl2ModelEditor aadlEditor = (Aadl2ModelEditor) editor;
+//					final StructuredViewer viewer = (StructuredViewer) aadlEditor.getViewer();
+//					final IElementComparer currentComparer = viewer.getComparer();
+//					viewer.setComparer( uriComparer );
+//					aadlEditor.setSelectionToViewer( Collections.singleton( p_element ) );
+//					
+//					viewer.setComparer( currentComparer );
 				}
 				else if ( editor instanceof XtextEditor ) {
 					final XtextEditor xtextEditor = (XtextEditor) editor;

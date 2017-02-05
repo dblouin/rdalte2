@@ -89,7 +89,7 @@
    <extension
          point="fr.openpeople.rdalte.ide.editorHandlers">
       <handler
-            class="fr.openpeople.rdalte.ide.osate.CoreEditorHandler">
+            class="fr.openpeople.rdalte.ide.osate.OsateEditorsHandler">
       </handler>
    </extension>
    <extension
