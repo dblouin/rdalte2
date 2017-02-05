@@ -6,4 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Import-Package: fr.labsticc.framework.constraints.ocl.service,
- fr.labsticc.framework.constraints.ocl.view
+ fr.labsticc.framework.constraints.ocl.view,
+ fr.tpt.useme.architecture.model.usemearch
+Require-Bundle: fr.labsticc.framework.settings.model.editor;bundle-version="1.0.0",
+ fr.labsticc.framework.constraints.model.editor;bundle-version="2.1.0"
+Export-Package: fr.tpt.rdalte.useme.settings
