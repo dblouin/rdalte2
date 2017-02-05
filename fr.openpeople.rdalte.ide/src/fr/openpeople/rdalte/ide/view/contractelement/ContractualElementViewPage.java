@@ -50,7 +50,7 @@ import fr.labsticc.framework.constraints.view.IConstraintViewersConfiguration;
 import fr.labsticc.framework.core.exception.IExceptionHandler;
 import fr.openpeople.rdal2.model.rdal.TextualContractualElement;
 import fr.openpeople.rdalte.ide.view.AbstractRdalEditorViewPage;
-import fr.openpeople.rdalte.ide.view.EditorUtil;
+import fr.openpeople.rdalte.ide.view.RdalteEditorUtil;
 import fr.openpeople.rdalte.service.IContractualElementBusinessDelegate;
 
 public class ContractualElementViewPage extends AbstractRdalEditorViewPage<TextualContractualElement> {
@@ -310,7 +310,7 @@ public class ContractualElementViewPage extends AbstractRdalEditorViewPage<Textu
 			@Override
 			public void openLibrariesRequested( final Collection<String> p_libraryNames ) {
 				try {
-					EditorUtil.openEditors( libraryIds( p_libraryNames ) );
+					RdalteEditorUtil.openEditors( libraryIds( p_libraryNames ) );
 				}
 				catch ( final Throwable p_th ) {
 					handleException( p_th, p_libraryNames );

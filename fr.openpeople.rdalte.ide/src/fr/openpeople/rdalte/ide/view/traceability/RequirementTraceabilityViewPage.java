@@ -49,7 +49,7 @@ import fr.openpeople.rdal2.model.rdal.IdentifiedElement;
 import fr.openpeople.rdal2.model.rdal.RequirementsPackage;
 import fr.openpeople.rdal2.model.rdal.Specification;
 import fr.openpeople.rdalte.ide.view.AbstractRdalEditorViewPage;
-import fr.openpeople.rdalte.ide.view.EditorUtil;
+import fr.openpeople.rdalte.ide.view.RdalteEditorUtil;
 import fr.openpeople.rdalte.service.IContractualElementTraceabilityBusinessDelegate;
 
 public class RequirementTraceabilityViewPage extends AbstractRdalEditorViewPage<EObject> {
@@ -168,10 +168,10 @@ public class RequirementTraceabilityViewPage extends AbstractRdalEditorViewPage<
 		try {
 			for ( final EObject element : selectedDesignElements() ) {
 				if ( element instanceof DesignElementReference ) {
-					EditorUtil.openEditor( ( (DesignElementReference) element ).getDesignElement() );
+					RdalteEditorUtil.openEditor( ( (DesignElementReference) element ).getDesignElement() );
 				}
 				else {
-					EditorUtil.openEditor( element );
+					RdalteEditorUtil.openEditor( element );
 				}
 			}
 		}

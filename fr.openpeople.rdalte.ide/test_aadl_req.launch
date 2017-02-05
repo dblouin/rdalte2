@@ -13,7 +13,7 @@
 <booleanAttribute key="default" value="true"/>
 <stringAttribute key="deselected_workspace_plugins" value="fr.openpeople.rdalte.ide.osate,org.slf4j.log4j12,fr.labsticc.framework.constraints.view,fr.labsticc.framework.constraints.service.ocl,fr.labsticc.framework.view,fr.labsticc.framework.core,fr.labsticc.framework.emf,fr.labsticc.framework.service,fr.labsticc.framework.constraints.ide,fr.labsticc.framework.view.swt,fr.openpeople.rdal.model.editor,fr.openpeople.rdalte.service,fr.openpeople.rdal.model.diagram,fr.labsticc.framework.constraints.core,fr.openpeople.rdalte.ide,fr.openpeople.rdal.model.edit,fr.labsticc.framework.atl.osate,fr.labsticc.framework.constraints.view.ocl,fr.labsticc.framework.ide,fr.labsticc.framework.atl,fr.labsticc.framework.constraints.service,fr.labsticc.framework.constraints.model,fr.openpeople.rdal.model"/>
 <booleanAttribute key="includeOptional" value="true"/>
-<stringAttribute key="location" value="F:\Projets\aadl-requirements\test_RDALTE2_demo"/>
+<stringAttribute key="location" value="D:\Projets\aadl-requirements\test_RDALTE2_demo"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>

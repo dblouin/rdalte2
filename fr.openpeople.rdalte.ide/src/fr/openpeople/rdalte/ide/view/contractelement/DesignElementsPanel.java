@@ -69,7 +69,7 @@ import fr.openpeople.rdal2.model.rdal.RefManuallySelectedDesignElements;
 import fr.openpeople.rdal2.model.rdal.RefQueryCollectedDesignElements;
 import fr.openpeople.rdal2.model.rdal.ReferencedDesignElements;
 import fr.openpeople.rdal2.model.rdal.TraceableToDesignElementsElement;
-import fr.openpeople.rdalte.ide.view.EditorUtil;
+import fr.openpeople.rdalte.ide.view.RdalteEditorUtil;
 import fr.openpeople.rdalte.service.IContractualElementBusinessDelegate;
 import fr.openpeople.rdalte.service.ITraceableToDesignElementBusinessDelegate;
 
@@ -103,10 +103,10 @@ public class DesignElementsPanel extends Composite {
 	private TraceableToDesignElementsElement traceableToDesignElem;
 
 	public DesignElementsPanel(	final Composite p_parent, 
-											final int pi_style,
-											final IConstraintViewersConfiguration p_constraintViewsConfig,
-											final IContractualElementBusinessDelegate p_businessDelegate,
-											final IExceptionHandler p_exceptionHandler ) {
+								final int pi_style,
+								final IConstraintViewersConfiguration p_constraintViewsConfig,
+								final IContractualElementBusinessDelegate p_businessDelegate,
+								final IExceptionHandler p_exceptionHandler ) {
 		super( p_parent, pi_style );
 		
 		businessDelegate = p_businessDelegate;
@@ -247,7 +247,7 @@ public class DesignElementsPanel extends Composite {
 		try {
 			for ( final DesignElementReference modelObjectRef : selectedRefModelElements() ) {
 				final EObject modelElement = modelObjectRef.getDesignElement();
-				EditorUtil.openEditor( modelElement );
+				RdalteEditorUtil.openEditor( modelElement );
 			}
 		}
 		catch ( Throwable p_th ) {
@@ -508,7 +508,7 @@ public class DesignElementsPanel extends Composite {
 			@Override
 			public void openLibrariesRequested( final Collection<String> p_libraryNames ) {
 				try {
-					EditorUtil.openEditors( libraryIds( p_libraryNames ) );
+					RdalteEditorUtil.openEditors( libraryIds( p_libraryNames ) );
 				}
 				catch ( final Throwable p_th ) {
 					getExceptionHandler().handleException( p_th, traceableToDesignElem );
