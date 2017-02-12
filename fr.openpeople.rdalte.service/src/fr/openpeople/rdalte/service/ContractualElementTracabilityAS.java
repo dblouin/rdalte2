@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
 import fr.labsticc.framework.constraints.core.exception.ConstraintException;
 import fr.labsticc.framework.core.exception.SystemException;
 import fr.labsticc.framework.emf.core.object.EMFURIEqualsList;
-import fr.labsticc.framework.emf.core.util.EMFUtil;
 import fr.labsticc.framework.settings.model.settings.SettingsSpecification;
 import fr.labsticc.framework.settings.service.ISettingsServiceDelegate;
 import fr.openpeople.rdal2.model.rdal.AbstractRequirement;
@@ -44,8 +43,8 @@ public class ContractualElementTracabilityAS {
 //	private final Collection<? extends EClassifier> supportedSatisfyingTypes;
 //	private final Collection<? extends EClassifier> supportedSatisfyingTypesInclContainers;
 	
-	public ContractualElementTracabilityAS( 	final IContractualElementBusinessDelegate p_requirementDelegate,
-										final ISettingsServiceDelegate p_settingsDelegate ) {
+	public ContractualElementTracabilityAS( final IContractualElementBusinessDelegate p_requirementDelegate,
+											final ISettingsServiceDelegate p_settingsDelegate ) {
 //										final Collection<? extends EClassifier> p_supportedSatisfyingTypes,
 //										final Collection<? extends EClassifier> p_supportedSatisfyingTypesInclContainers ) {
 		requirementDelegate = p_requirementDelegate;
@@ -209,11 +208,12 @@ public class ContractualElementTracabilityAS {
 	Collection<EObject> designElements( final EObject p_designElement,
 										final boolean pb_recursive ) {
 		final Collection<EObject> elements = new EMFURIEqualsList<EObject>();
-		final Set<EClass> supportedTypesInclContainers = new HashSet<EClass>();//TODO FIXsettingsDelegate.supportedTypesInclContainers();
-		
-		if ( pb_recursive ) {
-			EMFUtil.fillContentOfTypes( p_designElement, false, supportedTypesInclContainers, elements, true );
-		}
+		elements.add( p_designElement );
+//		final Set<EClass> supportedTypesInclContainers = settingsDelegate.supportedTypesInclContainers( SettingsPlugin, p_reference, p_element);
+//		
+//		if ( pb_recursive ) {
+//			EMFUtil.fillContentOfTypes( p_designElement, false, supportedTypesInclContainers, elements, true );
+//		}
 		
 		return (Collection) elements;
 	}

@@ -35,7 +35,6 @@ import fr.labsticc.framework.core.exception.ResourceAccessException;
 import fr.labsticc.framework.core.exception.SystemException;
 import fr.openpeople.rdal2.model.rdal.AbstractRequirement;
 import fr.openpeople.rdal2.model.rdal.DesignElementReference;
-import fr.openpeople.rdal2.model.rdal.RefineableElement;
 import fr.openpeople.rdal2.model.rdal.TextualContractualElement;
 import fr.openpeople.rdal2.model.rdal.VerifiableElement;
 
@@ -44,7 +43,7 @@ public class ContractualElementAS extends TraceableToDesignAS {
 	private static final String LINE_SEPARATOR = System.getProperty( "line.separator" );
 
 	public ContractualElementAS( 	final IConstraintServicesFacade p_cstFacade,
-								final IConstraintValidationAS p_validator ) {
+									final IConstraintValidationAS p_validator ) {
 		super( p_validator, p_cstFacade );
 	}
 
@@ -151,8 +150,8 @@ public class ContractualElementAS extends TraceableToDesignAS {
 	throws ConstraintValidationException, SystemException, InterruptedException {
 		super.validate( p_object );
 		
-		if ( pb_validateDependencies && p_object instanceof RefineableElement ) {
-			final RefineableElement contrElem = (RefineableElement) p_object;
+//		if ( pb_validateDependencies && p_object instanceof RefineableElement ) {
+//			final RefineableElement contrElem = (RefineableElement) p_object;
 			
 			// Default validation does not validate all dependencies
 			// TODO: 
@@ -161,7 +160,7 @@ public class ContractualElementAS extends TraceableToDesignAS {
 //					validate( requirement, pb_validateDependencies );
 //				}
 //			}
-		}
+//		}
 	}
 	
 	String evaluateExpressionAsString( final TextualContractualElement p_requirement )
