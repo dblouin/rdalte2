@@ -126,9 +126,9 @@ public class IDEReqTraceabilityBusinessDelegate extends AbstractViewPageBusiness
 				if ( content instanceof Specification ) {
 					final Specification reqSpec = (Specification) content;
 					
-					for ( final EObject designSpec : tracabilityFacade.designElementReferences( reqSpec ) ) {
+					for ( final DesignElementReference designSpec : tracabilityFacade.designElementReferences( reqSpec ) ) {
 						// Only consider architecture specifications specified by the requirements specification.
-						if ( rootContainerId.equals( designSpecificationId( designSpec ) ) ) {
+						if ( rootContainerId.equals( designSpecificationId( designSpec.getDesignElement() ) ) ) {
 							specs.add( reqSpec );
 							
 							break;
