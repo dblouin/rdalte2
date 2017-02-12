@@ -10,7 +10,9 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.XtextEditor;
+import org.osate.aadl2.Aadl2Package;
 import org.osate.aadl2.NamedElement;
+import org.osate.aadl2.instance.InstancePackage;
 import org.osate.workspace.WorkspacePlugin;
 import org.osate.xtext.aadl2.ui.contentassist.Aadl2ProposalProvider;
 
@@ -28,14 +30,14 @@ import fr.labsticc.framework.settings.modelinterface.osate.AbstractAadlModelInte
 public class BasicIdeAadlModelInterface extends AbstractAadlModelInterface /*implements IResourceChangeListener*/ {
 
 	private final EObjectAtOffsetHelper eObjectOffsetHelper;
-
-	private static final String AADL_EXT = WorkspacePlugin.SOURCE_FILE_EXT;
-	private static final String AAXL_EXT = WorkspacePlugin.MODEL_FILE_EXT;
 	
 	private final OSATEResourceHandler osateResHandler;
 	
 	public BasicIdeAadlModelInterface() {
-		super( new String[] { AADL_EXT, AAXL_EXT } );
+		super();
+		
+		addLanguage( Aadl2Package.eINSTANCE,  WorkspacePlugin.SOURCE_FILE_EXT);
+		addLanguage( InstancePackage.eINSTANCE,  WorkspacePlugin.MODEL_FILE_EXT );
 		
 		final OSATEResourceHandler foundHandler = findOsateResourceHandler();
 		
