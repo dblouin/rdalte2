@@ -5,7 +5,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import fr.labsticc.framework.settings.model.settings.impl.AbstractEcoreModelInterface;
-import fr.tpt.useme.architecture.model.usemearch.ContextElementInstance;
+import fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 
 public class UseMeArchModelInterface extends AbstractEcoreModelInterface {
@@ -54,8 +54,8 @@ public class UseMeArchModelInterface extends AbstractEcoreModelInterface {
 	public EList<Object> componentTypes( final Object p_component ) {
 		final EList<Object> types =  new BasicEList<Object>();
 		
-		if ( p_component instanceof ContextElementInstance ) {
-			types.add( ( (ContextElementInstance) p_component ).getElementType() );
+		if ( p_component instanceof ContextInstanceElement ) {
+			types.add( ( (ContextInstanceElement) p_component ).getElementType() );
 		}
 		
 		return types;
