@@ -1224,15 +1224,6 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRdalOrgPackage_OwnedContractualElements() {
-		return (EReference)rdalOrgPackageEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRequirementsPackage() {
 		return requirementsPackageEClass;
 	}
@@ -2285,7 +2276,6 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		createEReference(rdalOrgPackageEClass, RDAL_ORG_PACKAGE__PARENT);
 		createEAttribute(rdalOrgPackageEClass, RDAL_ORG_PACKAGE__REFINEMENT_ENTRIES);
 		createEReference(rdalOrgPackageEClass, RDAL_ORG_PACKAGE__OWNED_REFINEMENTS);
-		createEReference(rdalOrgPackageEClass, RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS);
 
 		requirementsPackageEClass = createEClass(REQUIREMENTS_PACKAGE);
 		createEReference(requirementsPackageEClass, REQUIREMENTS_PACKAGE__OWNED_REQUIREMENTS);
@@ -2493,11 +2483,11 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		interactionVariableEClass.getESuperTypes().add(this.getVariable());
 		actorReferenceEClass.getESuperTypes().add(this.getIdentifiedElement());
 		abstractRequirementEClass.getESuperTypes().add(this.getTextualContractualElement());
-		abstractRequirementEClass.getESuperTypes().add(this.getRefineableElement());
 		abstractRequirementEClass.getESuperTypes().add(this.getSatisfiableElement());
 		abstractRequirementEClass.getESuperTypes().add(this.getVerifiableElement());
 		verificationActivityEClass.getESuperTypes().add(this.getIdentifiedElement());
 		requirementEClass.getESuperTypes().add(this.getAbstractRequirement());
+		requirementEClass.getESuperTypes().add(this.getRefineableElement());
 		assumptionEClass.getESuperTypes().add(this.getAbstractRequirement());
 		abstractGoalEClass.getESuperTypes().add(this.getTextualContractualElement());
 		abstractGoalEClass.getESuperTypes().add(this.getSatisfiableElement());
@@ -2622,7 +2612,6 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		initEReference(getRdalOrgPackage_Parent(), this.getRdalOrgPackage(), this.getRdalOrgPackage_SubPackages(), "parent", null, 0, 1, RdalOrgPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRdalOrgPackage_RefinementEntries(), ecorePackage.getEFeatureMapEntry(), "refinementEntries", null, 0, -1, RdalOrgPackage.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRdalOrgPackage_OwnedRefinements(), this.getElementRefinement(), null, "ownedRefinements", null, 0, -1, RdalOrgPackage.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRdalOrgPackage_OwnedContractualElements(), this.getTextualContractualElement(), null, "ownedContractualElements", null, 1, -1, RdalOrgPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requirementsPackageEClass, RequirementsPackage.class, "RequirementsPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequirementsPackage_OwnedRequirements(), this.getAbstractRequirement(), this.getAbstractRequirement_Package(), "ownedRequirements", null, 1, -1, RequirementsPackage.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -2805,31 +2794,31 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";																					
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
 		addAnnotation
 		  (refineableElementEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "deepUniqueDesignElements"
-		   });				
+		   });	
 		addAnnotation
 		  (getReferencedDesignElements_OwnedDesignElementRefs(), 
 		   source, 
 		   new String[] {
 			 "constraints", "sumWeightsLessEqualsOne"
-		   });		
+		   });	
 		addAnnotation
 		  (designElementReferenceEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "designElementsContainedInSpecifedArchSpecs"
-		   });		
+		   });	
 		addAnnotation
 		  (normalizedRatioEDataType, 
 		   source, 
 		   new String[] {
 			 "constraints", "rangeZeroOne"
-		   });			
+		   });
 	}
 
 	/**
@@ -2839,7 +2828,7 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * @generated
 	 */
 	protected void createGmfAnnotations() {
-		String source = "gmf.link";									
+		String source = "gmf.link";	
 		addAnnotation
 		  (getAbstractContractualElement_Stakeholders(), 
 		   source, 
@@ -2847,7 +2836,7 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 			 "target.decoration", "arrow",
 			 "style", "dash",
 			 "color", "0,0,0"
-		   });		
+		   });	
 		addAnnotation
 		  (getAbstractContractualElement_ContactInformation(), 
 		   source, 
@@ -2855,14 +2844,14 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 			 "target.decoration", "arrow",
 			 "style", "dash",
 			 "color", "0,0,0"
-		   });													
+		   });	
 		addAnnotation
 		  (getAbstractRequirement_OwnedVerifiedBy(), 
 		   source, 
 		   new String[] {
 			 "target.decoration", "arrow",
 			 "style", "dash"
-		   });							
+		   });
 	}
 
 	/**
@@ -2872,25 +2861,25 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * @generated
 	 */
 	protected void createGmf_1Annotations() {
-		String source = "gmf.node";											
+		String source = "gmf.node";	
 		addAnnotation
 		  (contactInformationEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"
-		   });		
+		   });	
 		addAnnotation
 		  (uncertaintyEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"
-		   });												
+		   });	
 		addAnnotation
 		  (conflictEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"
-		   });						
+		   });
 	}
 
 	/**
@@ -2900,12 +2889,12 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * @generated
 	 */
 	protected void createGmf_2Annotations() {
-		String source = "gmf.compartment";																
+		String source = "gmf.compartment";	
 		addAnnotation
 		  (getRequirementsPackage_OwnedRequirements(), 
 		   source, 
 		   new String[] {
-		   });													
+		   });
 	}
 
 	/**
@@ -2915,103 +2904,103 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";		
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
 		addAnnotation
 		  (getElementRefinement_SubElementRefEntries(), 
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });		
+		   });	
 		addAnnotation
 		  (getElementRefinement_RefinedElementEntries(), 
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });		
+		   });	
 		addAnnotation
 		  (getElementRefinement_RefinedElement(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinedElementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getRequirementRefinement_OwnedSubRequirementRefs(), 
 		   source, 
 		   new String[] {
 			 "group", "#subElementRefEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getRequirementRefinement_RefinedRequirement(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinedElementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getGoalRefinement_OwnedSubGoalRefs(), 
 		   source, 
 		   new String[] {
 			 "group", "#subElementRefEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getGoalRefinement_RefinedGoal(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinedElementEntries"
-		   });						
+		   });	
 		addAnnotation
 		  (getRdalOrgPackage_ContractualElementEntries(), 
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });		
+		   });	
 		addAnnotation
 		  (getRdalOrgPackage_RefinementEntries(), 
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });		
+		   });	
 		addAnnotation
 		  (getRdalOrgPackage_OwnedRefinements(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinementEntries"
-		   });			
+		   });	
 		addAnnotation
 		  (getRequirementsPackage_OwnedRequirements(), 
 		   source, 
 		   new String[] {
 			 "group", "#contractualElementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getRequirementsPackage_OwnedRequirementsRefinements(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getGoalsPackage_OwnedGoals(), 
 		   source, 
 		   new String[] {
 			 "group", "#contractualElementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getGoalsPackage_OwnedGoalRefinements(), 
 		   source, 
 		   new String[] {
 			 "group", "#refinementEntries"
-		   });								
+		   });	
 		addAnnotation
 		  (getSubElementReference_ReferencedElementEntries(), 
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });		
+		   });	
 		addAnnotation
 		  (getSubRequirementReference_Requirement(), 
 		   source, 
 		   new String[] {
 			 "group", "#referencedElementEntries"
-		   });		
+		   });	
 		addAnnotation
 		  (getSubGoalReference_Goal(), 
 		   source, 

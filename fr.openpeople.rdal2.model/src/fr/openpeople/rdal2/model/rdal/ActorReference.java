@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ActorReference#getReferencedActors <em>Referenced Actors</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getActorReference()
  * @model

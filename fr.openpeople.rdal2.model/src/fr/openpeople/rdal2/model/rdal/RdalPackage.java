@@ -1711,22 +1711,13 @@ public interface RdalPackage extends EPackage {
 	int RDAL_ORG_PACKAGE__OWNED_REFINEMENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Owned Contractual Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
 	 * The number of structural features of the '<em>Org Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RDAL_ORG_PACKAGE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 7;
+	int RDAL_ORG_PACKAGE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal2.model.rdal.impl.RequirementsPackageImpl <em>Requirements Package</em>}' class.
@@ -1827,15 +1818,6 @@ public interface RdalPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIREMENTS_PACKAGE__OWNED_REFINEMENTS = RDAL_ORG_PACKAGE__OWNED_REFINEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Contractual Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS = RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
@@ -1990,15 +1972,6 @@ public interface RdalPackage extends EPackage {
 	 * @ordered
 	 */
 	int GOALS_PACKAGE__OWNED_REFINEMENTS = RDAL_ORG_PACKAGE__OWNED_REFINEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Contractual Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOALS_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS = RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
@@ -7155,17 +7128,6 @@ public interface RdalPackage extends EPackage {
 	EReference getRdalOrgPackage_OwnedRefinements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getOwnedContractualElements <em>Owned Contractual Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Contractual Elements</em>'.
-	 * @see fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getOwnedContractualElements()
-	 * @see #getRdalOrgPackage()
-	 * @generated
-	 */
-	EReference getRdalOrgPackage_OwnedContractualElements();
-
-	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal2.model.rdal.RequirementsPackage <em>Requirements Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8954,14 +8916,6 @@ public interface RdalPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RDAL_ORG_PACKAGE__OWNED_REFINEMENTS = eINSTANCE.getRdalOrgPackage_OwnedRefinements();
-
-		/**
-		 * The meta object literal for the '<em><b>Owned Contractual Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS = eINSTANCE.getRdalOrgPackage_OwnedContractualElements();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal2.model.rdal.impl.RequirementsPackageImpl <em>Requirements Package</em>}' class.

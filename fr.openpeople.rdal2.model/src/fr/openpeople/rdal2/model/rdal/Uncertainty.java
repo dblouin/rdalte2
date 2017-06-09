@@ -14,6 +14,7 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Uncertainty#getVolatility <em>Volatility</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Uncertainty#getCostsImpact <em>Costs Impact</em>}</li>
@@ -24,7 +25,6 @@ package fr.openpeople.rdal2.model.rdal;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Uncertainty#getPropRiskIndex <em>Prop Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Uncertainty#getMaturityIndex <em>Maturity Index</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getUncertainty()
  * @model annotation="gmf.node label='name'"

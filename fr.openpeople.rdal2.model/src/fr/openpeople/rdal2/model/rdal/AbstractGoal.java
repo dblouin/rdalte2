@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractGoal#getConflicts <em>Conflicts</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractGoal#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getAbstractGoal()
  * @model abstract="true"

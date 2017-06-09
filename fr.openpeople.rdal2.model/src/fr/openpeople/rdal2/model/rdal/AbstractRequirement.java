@@ -15,18 +15,18 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractRequirement#getOwnedVerifiedBy <em>Owned Verified By</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractRequirement#getRisk <em>Risk</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractRequirement#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getAbstractRequirement()
  * @model abstract="true"
  * @generated
  */
-public interface AbstractRequirement extends TextualContractualElement, RefineableElement, SatisfiableElement, VerifiableElement {
+public interface AbstractRequirement extends TextualContractualElement, SatisfiableElement, VerifiableElement {
 	/**
 	 * Returns the value of the '<em><b>Owned Verified By</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal2.model.rdal.VerificationActivity}.

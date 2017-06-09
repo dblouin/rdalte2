@@ -20,10 +20,10 @@ import fr.openpeople.rdal2.model.rdal.SatisfiableElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SatisfiableElementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

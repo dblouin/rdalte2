@@ -14,12 +14,12 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Conflict#getGoal <em>Goal</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Conflict#getContractualElement <em>Contractual Element</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Conflict#getDegree <em>Degree</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getConflict()
  * @model annotation="gmf.node label='name'"

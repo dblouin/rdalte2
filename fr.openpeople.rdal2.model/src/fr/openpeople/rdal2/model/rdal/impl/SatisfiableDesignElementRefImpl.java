@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SatisfiableDesignElementRefImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -31,12 +31,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractGoalImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractGoalImpl#getConflicts <em>Conflicts</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractGoalImpl#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

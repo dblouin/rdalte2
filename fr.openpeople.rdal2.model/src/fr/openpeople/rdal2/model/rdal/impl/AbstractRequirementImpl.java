@@ -32,6 +32,7 @@ import fr.openpeople.rdal2.model.rdal.VerificationActivity;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractRequirementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractRequirementImpl#getVerified <em>Verified</em>}</li>
@@ -39,7 +40,6 @@ import fr.openpeople.rdal2.model.rdal.VerificationActivity;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractRequirementImpl#getRisk <em>Risk</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractRequirementImpl#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -405,11 +405,6 @@ public abstract class AbstractRequirementImpl extends TextualContractualElementI
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == RefineableElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == SatisfiableElement.class) {
 			switch (derivedFeatureID) {
 				case RdalPackage.ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL: return RdalPackage.SATISFIABLE_ELEMENT__SATISFACTION_LEVEL;
@@ -432,11 +427,6 @@ public abstract class AbstractRequirementImpl extends TextualContractualElementI
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == RefineableElement.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == SatisfiableElement.class) {
 			switch (baseFeatureID) {
 				case RdalPackage.SATISFIABLE_ELEMENT__SATISFACTION_LEVEL: return RdalPackage.ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL;

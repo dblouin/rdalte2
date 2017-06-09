@@ -29,13 +29,7 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * @generated
  */
 public class RdalOrgPackageItemProvider
-	extends IdentifiedElementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifiedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -165,7 +159,6 @@ public class RdalOrgPackageItemProvider
 		switch (notification.getFeatureID(RdalOrgPackage.class)) {
 			case RdalPackage.RDAL_ORG_PACKAGE__CONTRACTUAL_ELEMENT_ENTRIES:
 			case RdalPackage.RDAL_ORG_PACKAGE__REFINEMENT_ENTRIES:
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_REFINEMENTS:

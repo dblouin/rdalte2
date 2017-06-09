@@ -27,13 +27,13 @@ import fr.openpeople.rdal2.model.rdal.SubGoalReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalRefinementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalRefinementImpl#getOwnedSubGoalRefs <em>Owned Sub Goal Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalRefinementImpl#getSubGoals <em>Sub Goals</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalRefinementImpl#getRefinedGoal <em>Refined Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

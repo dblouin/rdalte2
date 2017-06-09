@@ -15,11 +15,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ReferencedDesignElements#getOwnedDesignElementRefs <em>Owned Design Element Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ReferencedDesignElements#getAgregationType <em>Agregation Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getReferencedDesignElements()
  * @model abstract="true"

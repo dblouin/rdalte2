@@ -15,11 +15,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.GoalsPackage#getOwnedGoals <em>Owned Goals</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.GoalsPackage#getOwnedGoalRefinements <em>Owned Goal Refinements</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getGoalsPackage()
  * @model

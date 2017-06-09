@@ -51,7 +51,7 @@ public class RdalSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -260,7 +260,6 @@ public class RdalSwitch<T> extends Switch<T> {
 				AbstractRequirement abstractRequirement = (AbstractRequirement)theEObject;
 				T result = caseAbstractRequirement(abstractRequirement);
 				if (result == null) result = caseTextualContractualElement(abstractRequirement);
-				if (result == null) result = caseRefineableElement(abstractRequirement);
 				if (result == null) result = caseSatisfiableElement(abstractRequirement);
 				if (result == null) result = caseVerifiableElement(abstractRequirement);
 				if (result == null) result = caseAbstractContractualElement(abstractRequirement);
@@ -280,8 +279,8 @@ public class RdalSwitch<T> extends Switch<T> {
 				Requirement requirement = (Requirement)theEObject;
 				T result = caseRequirement(requirement);
 				if (result == null) result = caseAbstractRequirement(requirement);
-				if (result == null) result = caseTextualContractualElement(requirement);
 				if (result == null) result = caseRefineableElement(requirement);
+				if (result == null) result = caseTextualContractualElement(requirement);
 				if (result == null) result = caseSatisfiableElement(requirement);
 				if (result == null) result = caseVerifiableElement(requirement);
 				if (result == null) result = caseAbstractContractualElement(requirement);
@@ -295,7 +294,6 @@ public class RdalSwitch<T> extends Switch<T> {
 				T result = caseAssumption(assumption);
 				if (result == null) result = caseAbstractRequirement(assumption);
 				if (result == null) result = caseTextualContractualElement(assumption);
-				if (result == null) result = caseRefineableElement(assumption);
 				if (result == null) result = caseSatisfiableElement(assumption);
 				if (result == null) result = caseVerifiableElement(assumption);
 				if (result == null) result = caseAbstractContractualElement(assumption);

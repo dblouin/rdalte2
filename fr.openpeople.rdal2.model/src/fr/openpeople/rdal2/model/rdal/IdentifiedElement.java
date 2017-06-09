@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.IdentifiedElement#getName <em>Name</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.IdentifiedElement#getId <em>Id</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.IdentifiedElement#getDescription <em>Description</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.IdentifiedElement#getOwnedUserProperties <em>Owned User Properties</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getIdentifiedElement()
  * @model abstract="true"

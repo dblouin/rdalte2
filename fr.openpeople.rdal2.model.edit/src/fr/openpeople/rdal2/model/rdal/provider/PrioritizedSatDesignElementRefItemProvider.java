@@ -28,13 +28,7 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * @generated
  */
 public class PrioritizedSatDesignElementRefItemProvider
-	extends SatisfiableDesignElementRefItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends SatisfiableDesignElementRefItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

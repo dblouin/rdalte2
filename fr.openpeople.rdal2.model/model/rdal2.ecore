@@ -217,8 +217,6 @@
         <details key="group" value="#refinementEntries"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedContractualElements"
-        lowerBound="1" upperBound="-1" eType="#//TextualContractualElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementsPackage" eSuperTypes="#//RdalOrgPackage #//SatisfiableElement #//VerifiableElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedRequirements" lowerBound="1"

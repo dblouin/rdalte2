@@ -26,6 +26,7 @@ import fr.openpeople.rdal2.model.rdal.SubElementReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ElementRefinementImpl#getSubElementRefEntries <em>Sub Element Ref Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ElementRefinementImpl#getSubElements <em>Sub Elements</em>}</li>
@@ -33,7 +34,6 @@ import fr.openpeople.rdal2.model.rdal.SubElementReference;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ElementRefinementImpl#getOwnedSubElementRefs <em>Owned Sub Element Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ElementRefinementImpl#getRefinedElement <em>Refined Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

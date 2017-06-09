@@ -14,13 +14,13 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ContactInformation#getAddress <em>Address</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ContactInformation#getEmail <em>Email</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ContactInformation#getPhoneNumber <em>Phone Number</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ContactInformation#getCountry <em>Country</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getContactInformation()
  * @model annotation="gmf.node label='name'"

@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SubElementReference#getWeight <em>Weight</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SubElementReference#getReferencedElementEntries <em>Referenced Element Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SubElementReference#getReferencedElement <em>Referenced Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSubElementReference()
  * @model abstract="true"

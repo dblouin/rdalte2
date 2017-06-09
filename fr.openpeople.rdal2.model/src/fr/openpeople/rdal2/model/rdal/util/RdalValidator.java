@@ -281,17 +281,7 @@ public class RdalValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAbstractRequirement(AbstractRequirement abstractRequirement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(abstractRequirement, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(abstractRequirement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRefineableElement_deepUniqueDesignElements(abstractRequirement, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint(abstractRequirement, diagnostics, context);
 	}
 
 	/**
@@ -576,17 +566,7 @@ public class RdalValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAssumption(Assumption assumption, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(assumption, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(assumption, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRefineableElement_deepUniqueDesignElements(assumption, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint(assumption, diagnostics, context);
 	}
 
 	/**

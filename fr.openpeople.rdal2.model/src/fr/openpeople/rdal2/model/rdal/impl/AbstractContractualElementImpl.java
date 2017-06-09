@@ -33,6 +33,7 @@ import fr.openpeople.rdal2.model.rdal.Uncertainty;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractContractualElementImpl#getStakeholders <em>Stakeholders</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractContractualElementImpl#getOwnedRationales <em>Owned Rationales</em>}</li>
@@ -45,7 +46,6 @@ import fr.openpeople.rdal2.model.rdal.Uncertainty;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractContractualElementImpl#getOwnedDroppingReasons <em>Owned Dropping Reasons</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.AbstractContractualElementImpl#getChangeUncertainty <em>Change Uncertainty</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

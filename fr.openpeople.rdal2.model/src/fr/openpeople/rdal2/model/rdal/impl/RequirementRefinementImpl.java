@@ -32,6 +32,7 @@ import fr.openpeople.rdal2.model.rdal.VerifiableElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementRefinementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementRefinementImpl#getVerified <em>Verified</em>}</li>
@@ -39,7 +40,6 @@ import fr.openpeople.rdal2.model.rdal.VerifiableElement;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementRefinementImpl#getSubRequirements <em>Sub Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementRefinementImpl#getRefinedRequirement <em>Refined Requirement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.DesignElementReference#getDesignElement <em>Design Element</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.DesignElementReference#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.DesignElementReference#getEvaluationResult <em>Evaluation Result</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.DesignElementReference#getParentTraceableElement <em>Parent Traceable Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getDesignElementReference()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='designElementsContainedInSpecifedArchSpecs'"

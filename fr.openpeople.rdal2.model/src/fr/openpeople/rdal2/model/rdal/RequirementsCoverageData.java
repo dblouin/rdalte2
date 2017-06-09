@@ -14,11 +14,11 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementsCoverageData#getNbRequirements <em>Nb Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementsCoverageData#getVerificationLevel <em>Verification Level</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRequirementsCoverageData()
  * @model

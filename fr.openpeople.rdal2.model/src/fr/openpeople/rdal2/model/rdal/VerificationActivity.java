@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.VerificationActivity#getExternalRefs <em>External Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.VerificationActivity#isPassed <em>Passed</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.VerificationActivity#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.VerificationActivity#getCategory <em>Category</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getVerificationActivity()
  * @model

@@ -30,13 +30,7 @@ import fr.openpeople.rdal2.model.rdal.RequirementRefinement;
  * @generated
  */
 public class RequirementRefinementItemProvider
-	extends ElementRefinementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ElementRefinementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

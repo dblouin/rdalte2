@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TextualContractualElement#getOwnedExpression <em>Owned Expression</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TextualContractualElement#getOwnedCondition <em>Owned Condition</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TextualContractualElement#getCategory <em>Category</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TextualContractualElement#getPriority <em>Priority</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getTextualContractualElement()
  * @model abstract="true"

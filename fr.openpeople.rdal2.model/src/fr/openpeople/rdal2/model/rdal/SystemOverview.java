@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemOverview#getOwnedCapabilities <em>Owned Capabilities</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemOverview#getGlobalSystem <em>Global System</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemOverview#getOwnedSystemBoundary <em>Owned System Boundary</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemOverview#getPurpose <em>Purpose</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSystemOverview()
  * @model

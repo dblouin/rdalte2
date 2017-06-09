@@ -28,12 +28,12 @@ import fr.openpeople.rdal2.model.rdal.SatisfiableElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalsPackageImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalsPackageImpl#getOwnedGoals <em>Owned Goals</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.GoalsPackageImpl#getOwnedGoalRefinements <em>Owned Goal Refinements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementRefinement#getOwnedSubRequirementRefs <em>Owned Sub Requirement Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementRefinement#getSubRequirements <em>Sub Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementRefinement#getRefinedRequirement <em>Refined Requirement</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRequirementRefinement()
  * @model

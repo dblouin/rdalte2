@@ -11,8 +11,6 @@ import fr.openpeople.rdal2.model.rdal.Sensitivity;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sensitivity</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

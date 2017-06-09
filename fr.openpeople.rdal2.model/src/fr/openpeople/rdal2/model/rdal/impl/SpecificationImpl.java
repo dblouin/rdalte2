@@ -39,6 +39,7 @@ import fr.openpeople.rdal2.model.rdal.VerifiableElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SpecificationImpl#getVerified <em>Verified</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SpecificationImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
@@ -53,7 +54,6 @@ import fr.openpeople.rdal2.model.rdal.VerifiableElement;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SpecificationImpl#getOwnedNonFuncProperties <em>Owned Non Func Properties</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SpecificationImpl#getOwnedStakeholders <em>Owned Stakeholders</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

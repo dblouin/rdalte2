@@ -29,13 +29,13 @@ import fr.openpeople.rdal2.model.rdal.VerificationActivity;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.VerificationActivityImpl#getExternalRefs <em>External Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.VerificationActivityImpl#isPassed <em>Passed</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.VerificationActivityImpl#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.VerificationActivityImpl#getCategory <em>Category</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

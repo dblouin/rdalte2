@@ -29,13 +29,7 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * @generated
  */
 public class ElementRefinementItemProvider
-	extends IdentifiedElementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifiedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

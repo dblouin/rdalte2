@@ -11,8 +11,6 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Non Functional Goal</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

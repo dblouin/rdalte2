@@ -15,11 +15,11 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.PrioritizedSatDesignElementRefImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.PrioritizedSatDesignElementRefImpl#getWeight <em>Weight</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

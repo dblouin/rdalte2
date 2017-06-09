@@ -24,13 +24,7 @@ import fr.openpeople.rdal2.model.rdal.Sensitivity;
  * @generated
  */
 public class SensitivityItemProvider
-	extends TraceableToDesignElementsElementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends TraceableToDesignElementsElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

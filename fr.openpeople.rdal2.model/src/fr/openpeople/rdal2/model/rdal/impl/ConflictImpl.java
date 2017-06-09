@@ -23,12 +23,12 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ConflictImpl#getGoal <em>Goal</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ConflictImpl#getContractualElement <em>Contractual Element</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ConflictImpl#getDegree <em>Degree</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

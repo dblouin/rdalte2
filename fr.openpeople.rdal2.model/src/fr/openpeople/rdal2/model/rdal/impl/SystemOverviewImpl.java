@@ -31,6 +31,7 @@ import fr.openpeople.rdal2.model.rdal.SystemOverview;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemOverviewImpl#getOwnedCapabilities <em>Owned Capabilities</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemOverviewImpl#getGlobalSystem <em>Global System</em>}</li>
@@ -39,7 +40,6 @@ import fr.openpeople.rdal2.model.rdal.SystemOverview;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemOverviewImpl#getOwnedSystemBoundary <em>Owned System Boundary</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemOverviewImpl#getPurpose <em>Purpose</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

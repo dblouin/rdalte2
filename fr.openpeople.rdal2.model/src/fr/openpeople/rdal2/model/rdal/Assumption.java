@@ -16,11 +16,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Assumption#getImageRequirement <em>Image Requirement</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Assumption#getImageAssumptions <em>Image Assumptions</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getAssumption()
  * @model

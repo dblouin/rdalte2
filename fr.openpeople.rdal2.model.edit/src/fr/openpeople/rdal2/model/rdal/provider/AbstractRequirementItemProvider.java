@@ -34,13 +34,7 @@ import fr.openpeople.rdal2.model.rdal.RdalPackage;
  * @generated
  */
 public class AbstractRequirementItemProvider
-	extends TextualContractualElementItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends TextualContractualElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

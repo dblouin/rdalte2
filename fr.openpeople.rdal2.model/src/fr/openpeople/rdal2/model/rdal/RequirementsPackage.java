@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementsPackage#getOwnedRequirements <em>Owned Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementsPackage#getFunctionUsedIn <em>Function Used In</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RequirementsPackage#getOwnedRequirementsRefinements <em>Owned Requirements Refinements</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRequirementsPackage()
  * @model

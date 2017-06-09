@@ -14,10 +14,10 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SubGoalReference#getGoal <em>Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSubGoalReference()
  * @model

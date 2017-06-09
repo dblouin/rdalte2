@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractContractualElement#getStakeholders <em>Stakeholders</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractContractualElement#getOwnedRationales <em>Owned Rationales</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractContractualElement#getOwnedDroppingReasons <em>Owned Dropping Reasons</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.AbstractContractualElement#getChangeUncertainty <em>Change Uncertainty</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getAbstractContractualElement()
  * @model abstract="true"

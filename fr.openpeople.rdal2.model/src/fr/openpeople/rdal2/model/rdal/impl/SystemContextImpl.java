@@ -30,13 +30,13 @@ import fr.openpeople.rdal2.model.rdal.SystemOverview;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getGlobalSystemContext <em>Global System Context</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getSystemContextBoundary <em>System Context Boundary</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getActors <em>Actors</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getSystemOverview <em>System Overview</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

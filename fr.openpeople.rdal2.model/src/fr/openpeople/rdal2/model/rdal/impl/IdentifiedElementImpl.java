@@ -29,13 +29,13 @@ import fr.openpeople.rdal2.model.rdal.UserProperty;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.IdentifiedElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.IdentifiedElementImpl#getId <em>Id</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.IdentifiedElementImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.IdentifiedElementImpl#getOwnedUserProperties <em>Owned User Properties</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

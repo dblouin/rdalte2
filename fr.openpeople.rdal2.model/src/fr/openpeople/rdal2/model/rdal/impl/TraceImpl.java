@@ -24,10 +24,10 @@ import fr.openpeople.rdal2.model.rdal.TraceDesignElementRef;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TraceImpl#getSpecifications <em>Specifications</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

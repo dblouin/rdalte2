@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ContactInformationImpl#getAddress <em>Address</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ContactInformationImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ContactInformationImpl#getPhoneNumber <em>Phone Number</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ContactInformationImpl#getCountry <em>Country</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

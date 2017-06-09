@@ -10,11 +10,11 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TraceableToDesignElementsElement#getOwnedReferencedDesignElements <em>Owned Referenced Design Elements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.TraceableToDesignElementsElement#getSpecification <em>Specification</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getTraceableToDesignElementsElement()
  * @model abstract="true"

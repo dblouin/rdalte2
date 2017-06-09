@@ -28,11 +28,11 @@ import fr.openpeople.rdal2.model.rdal.ReferencedDesignElements;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ReferencedDesignElementsImpl#getOwnedDesignElementRefs <em>Owned Design Element Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.ReferencedDesignElementsImpl#getAgregationType <em>Agregation Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

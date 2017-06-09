@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getSpecification <em>Specification</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getSubPackages <em>Sub Packages</em>}</li>
@@ -24,9 +25,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getRefinementEntries <em>Refinement Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getOwnedRefinements <em>Owned Refinements</em>}</li>
- *   <li>{@link fr.openpeople.rdal2.model.rdal.RdalOrgPackage#getOwnedContractualElements <em>Owned Contractual Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRdalOrgPackage()
  * @model abstract="true"
@@ -157,21 +156,5 @@ public interface RdalOrgPackage extends IdentifiedElement {
 	 * @generated
 	 */
 	EList<ElementRefinement> getOwnedRefinements();
-
-	/**
-	 * Returns the value of the '<em><b>Owned Contractual Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.openpeople.rdal2.model.rdal.TextualContractualElement}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Owned Contractual Elements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Contractual Elements</em>' containment reference list.
-	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRdalOrgPackage_OwnedContractualElements()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<TextualContractualElement> getOwnedContractualElements();
 
 } // RdalOrgPackage

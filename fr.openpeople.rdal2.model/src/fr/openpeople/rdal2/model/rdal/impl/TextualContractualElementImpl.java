@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TextualContractualElementImpl#getOwnedExpression <em>Owned Expression</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TextualContractualElementImpl#getOwnedCondition <em>Owned Condition</em>}</li>
@@ -36,7 +37,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TextualContractualElementImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TextualContractualElementImpl#getPriority <em>Priority</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

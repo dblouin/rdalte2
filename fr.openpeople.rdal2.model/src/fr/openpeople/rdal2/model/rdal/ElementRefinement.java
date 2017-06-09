@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ElementRefinement#getSubElementRefEntries <em>Sub Element Ref Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ElementRefinement#getSubElements <em>Sub Elements</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ElementRefinement#getOwnedSubElementRefs <em>Owned Sub Element Refs</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.ElementRefinement#getRefinedElement <em>Refined Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getElementRefinement()
  * @model abstract="true"

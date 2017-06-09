@@ -22,12 +22,12 @@ import fr.openpeople.rdal2.model.rdal.SubElementReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SubElementReferenceImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SubElementReferenceImpl#getReferencedElementEntries <em>Referenced Element Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SubElementReferenceImpl#getReferencedElement <em>Referenced Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

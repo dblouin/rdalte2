@@ -22,10 +22,10 @@ import fr.openpeople.rdal2.model.rdal.Stakeholder;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RationaleImpl#getStakeholders <em>Stakeholders</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

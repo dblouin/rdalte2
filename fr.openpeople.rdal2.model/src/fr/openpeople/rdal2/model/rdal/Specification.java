@@ -18,6 +18,7 @@ import fr.labsticc.framework.constraints.model.constraints.ConstraintLanguagesSp
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Specification#getOwnedPackages <em>Owned Packages</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Specification#getOwnedContactInformation <em>Owned Contact Information</em>}</li>
@@ -30,7 +31,6 @@ import fr.labsticc.framework.constraints.model.constraints.ConstraintLanguagesSp
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Specification#getOwnedNonFuncProperties <em>Owned Non Func Properties</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Specification#getOwnedStakeholders <em>Owned Stakeholders</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSpecification()
  * @model

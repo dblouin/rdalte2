@@ -21,11 +21,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementsCoverageDataImpl#getNbRequirements <em>Nb Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementsCoverageDataImpl#getVerificationLevel <em>Verification Level</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

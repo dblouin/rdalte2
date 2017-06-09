@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.UncertaintyImpl#getVolatility <em>Volatility</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.UncertaintyImpl#getCostsImpact <em>Costs Impact</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.UncertaintyImpl#getPropRiskIndex <em>Prop Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.UncertaintyImpl#getMaturityIndex <em>Maturity Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -22,13 +22,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.QualityObjectiveImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.QualityObjectiveImpl#getOwnedSensitivity <em>Owned Sensitivity</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.QualityObjectiveImpl#getModality <em>Modality</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.QualityObjectiveImpl#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

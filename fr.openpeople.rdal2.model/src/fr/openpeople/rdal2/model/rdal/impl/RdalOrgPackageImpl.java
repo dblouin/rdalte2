@@ -33,6 +33,7 @@ import fr.openpeople.rdal2.model.rdal.TextualContractualElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getSpecification <em>Specification</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getSubPackages <em>Sub Packages</em>}</li>
@@ -40,9 +41,7 @@ import fr.openpeople.rdal2.model.rdal.TextualContractualElement;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getRefinementEntries <em>Refinement Entries</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getOwnedRefinements <em>Owned Refinements</em>}</li>
- *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RdalOrgPackageImpl#getOwnedContractualElements <em>Owned Contractual Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,15 +83,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 	 * @ordered
 	 */
 	protected FeatureMap refinementEntries;
-	/**
-	 * The cached value of the '{@link #getOwnedContractualElements() <em>Owned Contractual Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOwnedContractualElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TextualContractualElement> ownedContractualElements;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,18 +253,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextualContractualElement> getOwnedContractualElements() {
-		if (ownedContractualElements == null) {
-			ownedContractualElements = new EObjectContainmentEList<TextualContractualElement>(TextualContractualElement.class, this, RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS);
-		}
-		return ownedContractualElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -313,8 +291,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 				return ((InternalEList<?>)getRefinementEntries()).basicRemove(otherEnd, msgs);
 			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_REFINEMENTS:
 				return ((InternalEList<?>)getOwnedRefinements()).basicRemove(otherEnd, msgs);
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
-				return ((InternalEList<?>)getOwnedContractualElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -356,8 +332,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 				return ((FeatureMap.Internal)getRefinementEntries()).getWrapper();
 			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_REFINEMENTS:
 				return getOwnedRefinements();
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
-				return getOwnedContractualElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -385,10 +359,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 				getOwnedRefinements().clear();
 				getOwnedRefinements().addAll((Collection<? extends ElementRefinement>)newValue);
 				return;
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
-				getOwnedContractualElements().clear();
-				getOwnedContractualElements().addAll((Collection<? extends TextualContractualElement>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -412,9 +382,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 				return;
 			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_REFINEMENTS:
 				getOwnedRefinements().clear();
-				return;
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
-				getOwnedContractualElements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -440,8 +407,6 @@ public abstract class RdalOrgPackageImpl extends IdentifiedElementImpl implement
 				return refinementEntries != null && !refinementEntries.isEmpty();
 			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_REFINEMENTS:
 				return !getOwnedRefinements().isEmpty();
-			case RdalPackage.RDAL_ORG_PACKAGE__OWNED_CONTRACTUAL_ELEMENTS:
-				return ownedContractualElements != null && !ownedContractualElements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

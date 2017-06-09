@@ -27,11 +27,11 @@ import fr.openpeople.rdal2.model.rdal.Requirement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementImpl#getImageAssumptions <em>Image Assumptions</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.RequirementImpl#getFunctionUsedIn <em>Function Used In</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

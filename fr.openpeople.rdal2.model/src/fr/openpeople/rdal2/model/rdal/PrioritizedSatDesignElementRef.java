@@ -10,11 +10,11 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.PrioritizedSatDesignElementRef#getPriority <em>Priority</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.PrioritizedSatDesignElementRef#getWeight <em>Weight</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getPrioritizedSatDesignElementRef()
  * @model

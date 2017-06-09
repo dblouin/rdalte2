@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TraceableToDesignElementsElementImpl#getOwnedReferencedDesignElements <em>Owned Referenced Design Elements</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.TraceableToDesignElementsElementImpl#getSpecification <em>Specification</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

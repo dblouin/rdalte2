@@ -10,13 +10,13 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.QualityObjective#getProperty <em>Property</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.QualityObjective#getOwnedSensitivity <em>Owned Sensitivity</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.QualityObjective#getModality <em>Modality</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.QualityObjective#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getQualityObjective()
  * @model

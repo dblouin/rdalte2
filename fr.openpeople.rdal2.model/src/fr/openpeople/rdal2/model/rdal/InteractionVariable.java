@@ -10,11 +10,11 @@ package fr.openpeople.rdal2.model.rdal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.InteractionVariable#getType <em>Type</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.InteractionVariable#isNeglected <em>Neglected</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getInteractionVariable()
  * @model

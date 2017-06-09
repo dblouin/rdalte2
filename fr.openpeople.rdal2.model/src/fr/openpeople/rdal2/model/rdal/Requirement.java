@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Requirement#getImageAssumptions <em>Image Assumptions</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.Requirement#getFunctionUsedIn <em>Function Used In</em>}</li>
  * </ul>
- * </p>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRequirement()
  * @model
  * @generated
  */
-public interface Requirement extends AbstractRequirement {
+public interface Requirement extends AbstractRequirement, RefineableElement {
 	/**
 	 * Returns the value of the '<em><b>Image Assumptions</b></em>' reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal2.model.rdal.Assumption}.
