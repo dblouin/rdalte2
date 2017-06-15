@@ -309,7 +309,8 @@ public class IDEReqTraceabilityBusinessDelegate extends AbstractViewPageBusiness
 			}
 		}
 		
-		throw new IllegalStateException( "No system architecture interface defined for component " + p_component );
+		return null;
+		//throw new IllegalStateException( "No system architecture interface defined for component " + p_component );
 	}
 
 	@Override
