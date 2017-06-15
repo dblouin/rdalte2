@@ -3,7 +3,7 @@
   <ownedLanguages id="usemearch" name="DSSL">
     <packages href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#/"/>
     <ownedCategoryAssociations>
-      <property href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//ContextElementType/category"/>
+      <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
       <ownedCategories id="useme_environmental" name="Environmental" description="" subCategories="useme_technical"/>
       <ownedCategories id="useme_technical" name="Technical" parentCategory="useme_environmental"/>
       <ownedCategories id="useme_physical" name="Physical"/>
@@ -103,6 +103,13 @@
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="AbstractGoal.designElements.ownedDesignElementRefs.designElement" name="AbstractGoal.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::AbstractGoal ) else self.oclIsKindOf( rdal::AbstractGoal ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
     </ownedLanguageAssociations>
     <ownedLanguageAssociations id="RDAL-Ecore" name="RDAL-Ecore" targetLanguage="Ecore">
       <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
@@ -120,11 +127,27 @@
         </ownedCondition>
       </ownedPropToTypesAssociations>
     </ownedLanguageAssociations>
+    <ownedLanguageAssociations id="RDAL-Sirius-Viewpoint" name="RDAL-Sirius-Viewpoint" targetLanguage="Viewpoint">
+      <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://www.eclipse.org/sirius/1.1.0#//description/Group"/>
+        <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Specification ) else self.oclIsKindOf( rdal::Specification ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="Requirement.designElements.ownedDesignElementRefs.designElement" name="Requirement.designElements.ownedDesignElementRefs.designElement">
+        <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
+        <associatedTypes href="http://www.eclipse.org/sirius/1.1.0#//description/IdentifiedElement"/>
+        <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Requirement ) else self.oclIsKindOf( rdal::Requirement ) endif">
+          <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        </ownedCondition>
+      </ownedPropToTypesAssociations>
+    </ownedLanguageAssociations>
     <ownedCategoryAssociations id="category_requirements" name="Requirements Categories">
       <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
       <subclass href="http://www.open-people.fr/rdal2#//Requirement"/>
-      <ownedCategories id="cat_requirement_System_Function" name="System Function"/>
-      <ownedCategories id="cat_requirement_Performance" name="Performance" description="" subCategories="cat_requirement_Safety cat_requirement_Usability"/>
+      <ownedCategories id="cat_requirement_System_Function" name="Functional"/>
+      <ownedCategories id="cat_requirement_Performance" name="Non Functional" description="" subCategories="cat_requirement_Safety cat_requirement_Usability"/>
       <ownedCategories id="cat_requirement_Safety" name="Safety" parentCategory="cat_requirement_Performance"/>
       <ownedCategories id="cat_requirement_Usability" name="Usability" parentCategory="cat_requirement_Performance"/>
     </ownedCategoryAssociations>
@@ -162,7 +185,11 @@
   </ownedLanguages>
   <ownedLanguages id="Ecore" name="Ecore">
     <packages href="http://www.eclipse.org/emf/2002/Ecore#/"/>
-    <ownedModelInterface id="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface" name="Ecore Archtecture Model Interface" providerId="fr.labsticc.framework.settings.model" serviceClass="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface"/>
+    <ownedModelInterface id="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface" name="Ecore Architecture Model Interface" providerId="fr.labsticc.framework.settings.model" serviceClass="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface"/>
     <fileExtensions>ecore</fileExtensions>
+  </ownedLanguages>
+  <ownedLanguages id="Viewpoint" name="Sirius Viewpoint">
+    <ownedModelInterface id="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface" name="Sirius Viewpoint Architecture Model Interface" description="" providerId="fr.labsticc.framework.settings.model" serviceClass="fr.labsticc.framework.settings.model.settings.impl.EcoreModelInterface"/>
+    <fileExtensions>odesign</fileExtensions>
   </ownedLanguages>
 </settings:SettingsSpecification>
