@@ -71,7 +71,7 @@ public interface GoalRefinement extends ElementRefinement, SatisfiableElement {
 	 * @return the value of the '<em>Refined Goal</em>' reference.
 	 * @see #setRefinedGoal(AbstractGoal)
 	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getGoalRefinement_RefinedGoal()
-	 * @model required="true"
+	 * @model required="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="group='#refinedElementEntries'"
 	 * @generated
 	 */

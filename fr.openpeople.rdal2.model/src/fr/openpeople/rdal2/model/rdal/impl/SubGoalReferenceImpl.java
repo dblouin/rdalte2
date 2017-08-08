@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 
 import fr.openpeople.rdal2.model.rdal.AbstractGoal;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
+import fr.openpeople.rdal2.model.rdal.RefineableElement;
 import fr.openpeople.rdal2.model.rdal.SubGoalReference;
 
 /**
@@ -64,6 +65,11 @@ public class SubGoalReferenceImpl extends SubElementReferenceImpl implements Sub
 	 */
 	public AbstractGoal basicGetGoal() {
 		return (AbstractGoal)getReferencedElementEntries().get(RdalPackage.Literals.SUB_GOAL_REFERENCE__GOAL, false);
+	}
+	
+	@Override
+	public RefineableElement basicGetReferencedElement() {
+		return basicGetGoal();
 	}
 
 	/**

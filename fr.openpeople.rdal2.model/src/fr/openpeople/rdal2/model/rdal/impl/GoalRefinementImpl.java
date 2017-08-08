@@ -13,11 +13,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreEList;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import fr.openpeople.rdal2.model.rdal.AbstractGoal;
 import fr.openpeople.rdal2.model.rdal.GoalRefinement;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
+import fr.openpeople.rdal2.model.rdal.RefineableElement;
 import fr.openpeople.rdal2.model.rdal.SatisfiableElement;
 import fr.openpeople.rdal2.model.rdal.SubGoalReference;
 
@@ -56,16 +58,6 @@ public class GoalRefinementImpl extends ElementRefinementImpl implements GoalRef
 	 * @ordered
 	 */
 	protected Float satisfactionLevel = SATISFACTION_LEVEL_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRefinedGoal() <em>Refined Goal</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefinedGoal()
-	 * @generated
-	 * @ordered
-	 */
-	protected AbstractGoal refinedGoal;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,21 +126,19 @@ public class GoalRefinementImpl extends ElementRefinementImpl implements GoalRef
 																elements.toArray() );
 	}
 
-	/**
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public EList<RefineableElement> getSubElements() {
+		return (EList) getSubGoals();
+	}
+
+	/*
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AbstractGoal getRefinedGoal() {
-		if (refinedGoal != null && refinedGoal.eIsProxy()) {
-			InternalEObject oldRefinedGoal = (InternalEObject)refinedGoal;
-			refinedGoal = (AbstractGoal)eResolveProxy(oldRefinedGoal);
-			if (refinedGoal != oldRefinedGoal) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdalPackage.GOAL_REFINEMENT__REFINED_GOAL, oldRefinedGoal, refinedGoal));
-			}
-		}
-		return refinedGoal;
+		AbstractGoal refinedGoal = basicGetRefinedGoal();
+		return refinedGoal != null && refinedGoal.eIsProxy() ? (AbstractGoal)eResolveProxy((InternalEObject)refinedGoal) : refinedGoal;
 	}
 
 	/**
@@ -157,7 +147,12 @@ public class GoalRefinementImpl extends ElementRefinementImpl implements GoalRef
 	 * @generated
 	 */
 	public AbstractGoal basicGetRefinedGoal() {
-		return refinedGoal;
+		return (AbstractGoal)getRefinedElementEntries().get(RdalPackage.Literals.GOAL_REFINEMENT__REFINED_GOAL, false);
+	}
+
+	@Override
+	public RefineableElement basicGetRefinedElement() {
+		return basicGetRefinedGoal();
 	}
 
 	/**
@@ -166,10 +161,7 @@ public class GoalRefinementImpl extends ElementRefinementImpl implements GoalRef
 	 * @generated
 	 */
 	public void setRefinedGoal(AbstractGoal newRefinedGoal) {
-		AbstractGoal oldRefinedGoal = refinedGoal;
-		refinedGoal = newRefinedGoal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RdalPackage.GOAL_REFINEMENT__REFINED_GOAL, oldRefinedGoal, refinedGoal));
+		((FeatureMap.Internal)getRefinedElementEntries()).set(RdalPackage.Literals.GOAL_REFINEMENT__REFINED_GOAL, newRefinedGoal);
 	}
 
 	/**
@@ -266,7 +258,7 @@ public class GoalRefinementImpl extends ElementRefinementImpl implements GoalRef
 			case RdalPackage.GOAL_REFINEMENT__SUB_GOALS:
 				return !getSubGoals().isEmpty();
 			case RdalPackage.GOAL_REFINEMENT__REFINED_GOAL:
-				return refinedGoal != null;
+				return basicGetRefinedGoal() != null;
 		}
 		return super.eIsSet(featureID);
 	}

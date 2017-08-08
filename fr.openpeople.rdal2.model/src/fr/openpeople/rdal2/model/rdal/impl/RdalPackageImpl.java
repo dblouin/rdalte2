@@ -1404,6 +1404,15 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSystemContext_SystemToBe() {
+		return (EReference)systemContextEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -2301,6 +2310,7 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		createEReference(systemContextEClass, SYSTEM_CONTEXT__SYSTEM_CONTEXT_BOUNDARY);
 		createEReference(systemContextEClass, SYSTEM_CONTEXT__ACTORS);
 		createEReference(systemContextEClass, SYSTEM_CONTEXT__SYSTEM_OVERVIEW);
+		createEReference(systemContextEClass, SYSTEM_CONTEXT__SYSTEM_TO_BE);
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__DESIGN_VARIABLE);
@@ -2530,17 +2540,17 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		initEReference(getElementRefinement_SubElements(), this.getRefineableElement(), null, "subElements", null, 1, -1, ElementRefinement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElementRefinement_RefinedElementEntries(), ecorePackage.getEFeatureMapEntry(), "refinedElementEntries", null, 1, 1, ElementRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getElementRefinement_OwnedSubElementRefs(), this.getSubElementReference(), null, "ownedSubElementRefs", null, 0, -1, ElementRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElementRefinement_RefinedElement(), this.getRefineableElement(), null, "refinedElement", null, 1, 1, ElementRefinement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getElementRefinement_RefinedElement(), this.getRefineableElement(), null, "refinedElement", null, 1, 1, ElementRefinement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(requirementRefinementEClass, RequirementRefinement.class, "RequirementRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequirementRefinement_OwnedSubRequirementRefs(), this.getSubRequirementReference(), null, "ownedSubRequirementRefs", null, 1, -1, RequirementRefinement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getRequirementRefinement_SubRequirements(), this.getAbstractRequirement(), null, "subRequirements", null, 1, -1, RequirementRefinement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirementRefinement_RefinedRequirement(), this.getAbstractRequirement(), null, "refinedRequirement", null, 1, 1, RequirementRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequirementRefinement_RefinedRequirement(), this.getRequirement(), null, "refinedRequirement", null, 1, 1, RequirementRefinement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(goalRefinementEClass, GoalRefinement.class, "GoalRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGoalRefinement_OwnedSubGoalRefs(), this.getSubGoalReference(), null, "ownedSubGoalRefs", null, 1, -1, GoalRefinement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getGoalRefinement_SubGoals(), this.getAbstractGoal(), null, "subGoals", null, 1, -1, GoalRefinement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getGoalRefinement_RefinedGoal(), this.getAbstractGoal(), null, "refinedGoal", null, 1, 1, GoalRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGoalRefinement_RefinedGoal(), this.getAbstractGoal(), null, "refinedGoal", null, 1, 1, GoalRefinement.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(traceableToDesignElementsElementEClass, TraceableToDesignElementsElement.class, "TraceableToDesignElementsElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTraceableToDesignElementsElement_OwnedReferencedDesignElements(), this.getReferencedDesignElements(), null, "ownedReferencedDesignElements", null, 0, 1, TraceableToDesignElementsElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2637,6 +2647,7 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		initEReference(getSystemContext_SystemContextBoundary(), this.getInteractionVariable(), null, "systemContextBoundary", null, 1, -1, SystemContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystemContext_Actors(), this.getActorReference(), null, "actors", null, 0, -1, SystemContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystemContext_SystemOverview(), this.getSystemOverview(), this.getSystemOverview_OwnedContexts(), "systemOverview", null, 0, 1, SystemContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemContext_SystemToBe(), ecorePackage.getEObject(), null, "systemToBe", null, 1, 1, SystemContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_DesignVariable(), ecorePackage.getEObject(), null, "designVariable", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2743,7 +2754,7 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		initEReference(getSubElementReference_ReferencedElement(), this.getRefineableElement(), null, "referencedElement", null, 1, 1, SubElementReference.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(subRequirementReferenceEClass, SubRequirementReference.class, "SubRequirementReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubRequirementReference_Requirement(), this.getAbstractRequirement(), null, "requirement", null, 1, 1, SubRequirementReference.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getSubRequirementReference_Requirement(), this.getRequirement(), null, "requirement", null, 1, 1, SubRequirementReference.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(subGoalReferenceEClass, SubGoalReference.class, "SubGoalReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubGoalReference_Goal(), this.getAbstractGoal(), null, "goal", null, 1, 1, SubGoalReference.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -2916,12 +2927,6 @@ public class RdalPackageImpl extends EPackageImpl implements RdalPackage {
 		   source, 
 		   new String[] {
 			 "kind", "group"
-		   });	
-		addAnnotation
-		  (getElementRefinement_RefinedElement(), 
-		   source, 
-		   new String[] {
-			 "group", "#refinedElementEntries"
 		   });	
 		addAnnotation
 		  (getRequirementRefinement_OwnedSubRequirementRefs(), 

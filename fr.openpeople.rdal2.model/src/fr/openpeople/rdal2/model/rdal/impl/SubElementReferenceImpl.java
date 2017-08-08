@@ -4,7 +4,6 @@ package fr.openpeople.rdal2.model.rdal.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -127,12 +126,13 @@ public abstract class SubElementReferenceImpl extends IdentifiedElementImpl impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public RefineableElement basicGetReferencedElement() {
-		final EList<RefineableElement> refElements = getReferencedElementEntries().list( RdalPackage.Literals.SUB_ELEMENT_REFERENCE__REFERENCED_ELEMENT );
-		
-		return refElements.isEmpty() ? null : refElements.get( 0 );
+		// TODO: implement this method to return the 'Referenced Element' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

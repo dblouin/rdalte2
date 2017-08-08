@@ -65,13 +65,13 @@ public interface RequirementRefinement extends ElementRefinement, SatisfiableEle
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Refined Requirement</em>' reference.
-	 * @see #setRefinedRequirement(AbstractRequirement)
+	 * @see #setRefinedRequirement(Requirement)
 	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getRequirementRefinement_RefinedRequirement()
-	 * @model required="true"
+	 * @model required="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="group='#refinedElementEntries'"
 	 * @generated
 	 */
-	AbstractRequirement getRefinedRequirement();
+	Requirement getRefinedRequirement();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal2.model.rdal.RequirementRefinement#getRefinedRequirement <em>Refined Requirement</em>}' reference.
@@ -81,6 +81,6 @@ public interface RequirementRefinement extends ElementRefinement, SatisfiableEle
 	 * @see #getRefinedRequirement()
 	 * @generated
 	 */
-	void setRefinedRequirement(AbstractRequirement value);
+	void setRefinedRequirement(Requirement value);
 
 } // RequirementRefinement

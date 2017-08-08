@@ -56,6 +56,7 @@ public class SystemContextItemProvider
 			addGlobalSystemContextPropertyDescriptor(object);
 			addSystemContextBoundaryPropertyDescriptor(object);
 			addActorsPropertyDescriptor(object);
+			addSystemToBePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -118,6 +119,28 @@ public class SystemContextItemProvider
 				 getString("_UI_SystemContext_actors_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SystemContext_actors_feature", "_UI_SystemContext_type"),
 				 RdalPackage.Literals.SYSTEM_CONTEXT__ACTORS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the System To Be feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSystemToBePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemContext_systemToBe_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemContext_systemToBe_feature", "_UI_SystemContext_type"),
+				 RdalPackage.Literals.SYSTEM_CONTEXT__SYSTEM_TO_BE,
 				 true,
 				 false,
 				 true,

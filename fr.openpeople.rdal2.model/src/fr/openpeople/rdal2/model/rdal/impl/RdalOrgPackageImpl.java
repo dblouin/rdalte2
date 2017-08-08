@@ -6,7 +6,6 @@
  */
 package fr.openpeople.rdal2.model.rdal.impl;
 
-import fr.openpeople.rdal2.model.rdal.ElementRefinement;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,16 +15,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import fr.openpeople.rdal2.model.rdal.ElementRefinement;
 import fr.openpeople.rdal2.model.rdal.RdalOrgPackage;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
 import fr.openpeople.rdal2.model.rdal.Specification;
-import fr.openpeople.rdal2.model.rdal.TextualContractualElement;
 
 /**
  * <!-- begin-user-doc -->

@@ -33,13 +33,13 @@ public interface SubRequirementReference extends SubElementReference {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Requirement</em>' reference.
-	 * @see #setRequirement(AbstractRequirement)
+	 * @see #setRequirement(Requirement)
 	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSubRequirementReference_Requirement()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="group='#referencedElementEntries'"
 	 * @generated
 	 */
-	AbstractRequirement getRequirement();
+	Requirement getRequirement();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal2.model.rdal.SubRequirementReference#getRequirement <em>Requirement</em>}' reference.
@@ -49,6 +49,6 @@ public interface SubRequirementReference extends SubElementReference {
 	 * @see #getRequirement()
 	 * @generated
 	 */
-	void setRequirement(AbstractRequirement value);
+	void setRequirement(Requirement value);
 
 } // SubRequirementReference

@@ -2472,13 +2472,22 @@ public interface RdalPackage extends EPackage {
 	int SYSTEM_CONTEXT__SYSTEM_OVERVIEW = ABSTRACT_CONTRACTUAL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>System To Be</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_CONTEXT__SYSTEM_TO_BE = ABSTRACT_CONTRACTUAL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>System Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT_FEATURE_COUNT = ABSTRACT_CONTRACTUAL_ELEMENT_FEATURE_COUNT + 4;
+	int SYSTEM_CONTEXT_FEATURE_COUNT = ABSTRACT_CONTRACTUAL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal2.model.rdal.impl.VariableImpl <em>Variable</em>}' class.
@@ -7343,6 +7352,17 @@ public interface RdalPackage extends EPackage {
 	EReference getSystemContext_SystemOverview();
 
 	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal2.model.rdal.SystemContext#getSystemToBe <em>System To Be</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>System To Be</em>'.
+	 * @see fr.openpeople.rdal2.model.rdal.SystemContext#getSystemToBe()
+	 * @see #getSystemContext()
+	 * @generated
+	 */
+	EReference getSystemContext_SystemToBe();
+
+	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal2.model.rdal.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9086,6 +9106,14 @@ public interface RdalPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SYSTEM_CONTEXT__SYSTEM_OVERVIEW = eINSTANCE.getSystemContext_SystemOverview();
+
+		/**
+		 * The meta object literal for the '<em><b>System To Be</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_CONTEXT__SYSTEM_TO_BE = eINSTANCE.getSystemContext_SystemToBe();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal2.model.rdal.impl.VariableImpl <em>Variable</em>}' class.

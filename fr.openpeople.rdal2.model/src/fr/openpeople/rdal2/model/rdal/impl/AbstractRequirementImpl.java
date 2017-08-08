@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import fr.openpeople.rdal2.model.rdal.AbstractRequirement;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
-import fr.openpeople.rdal2.model.rdal.RefineableElement;
 import fr.openpeople.rdal2.model.rdal.RequirementsPackage;
 import fr.openpeople.rdal2.model.rdal.SatisfiableElement;
 import fr.openpeople.rdal2.model.rdal.VerifiableElement;

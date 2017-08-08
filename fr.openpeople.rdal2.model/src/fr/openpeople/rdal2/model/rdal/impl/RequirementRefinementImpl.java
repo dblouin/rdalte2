@@ -17,10 +17,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreEList;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import fr.openpeople.rdal2.model.rdal.AbstractRequirement;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
+import fr.openpeople.rdal2.model.rdal.RefineableElement;
+import fr.openpeople.rdal2.model.rdal.Requirement;
 import fr.openpeople.rdal2.model.rdal.RequirementRefinement;
 import fr.openpeople.rdal2.model.rdal.SatisfiableElement;
 import fr.openpeople.rdal2.model.rdal.SubRequirementReference;
@@ -83,16 +86,6 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 	 * @ordered
 	 */
 	protected Boolean verified = VERIFIED_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRefinedRequirement() <em>Refined Requirement</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefinedRequirement()
-	 * @generated
-	 * @ordered
-	 */
-	protected AbstractRequirement refinedRequirement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,21 +175,9 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 																		elements.toArray() );
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AbstractRequirement getRefinedRequirement() {
-		if (refinedRequirement != null && refinedRequirement.eIsProxy()) {
-			InternalEObject oldRefinedRequirement = (InternalEObject)refinedRequirement;
-			refinedRequirement = (AbstractRequirement)eResolveProxy(oldRefinedRequirement);
-			if (refinedRequirement != oldRefinedRequirement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdalPackage.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT, oldRefinedRequirement, refinedRequirement));
-			}
-		}
-		return refinedRequirement;
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public EList<RefineableElement> getSubElements() {
+		return (EList) getSubRequirements();
 	}
 
 	/**
@@ -204,8 +185,9 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractRequirement basicGetRefinedRequirement() {
-		return refinedRequirement;
+	public Requirement getRefinedRequirement() {
+		Requirement refinedRequirement = basicGetRefinedRequirement();
+		return refinedRequirement != null && refinedRequirement.eIsProxy() ? (Requirement)eResolveProxy((InternalEObject)refinedRequirement) : refinedRequirement;
 	}
 
 	/**
@@ -213,11 +195,22 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRefinedRequirement(AbstractRequirement newRefinedRequirement) {
-		AbstractRequirement oldRefinedRequirement = refinedRequirement;
-		refinedRequirement = newRefinedRequirement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RdalPackage.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT, oldRefinedRequirement, refinedRequirement));
+	public Requirement basicGetRefinedRequirement() {
+		return (Requirement)getRefinedElementEntries().get(RdalPackage.Literals.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT, false);
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefinedRequirement(Requirement newRefinedRequirement) {
+		((FeatureMap.Internal)getRefinedElementEntries()).set(RdalPackage.Literals.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT, newRefinedRequirement);
+	}
+
+	@Override
+	public RefineableElement basicGetRefinedElement() {
+		return basicGetRefinedRequirement();
 	}
 
 	/**
@@ -277,7 +270,7 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 				getOwnedSubRequirementRefs().addAll((Collection<? extends SubRequirementReference>)newValue);
 				return;
 			case RdalPackage.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT:
-				setRefinedRequirement((AbstractRequirement)newValue);
+				setRefinedRequirement((Requirement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -301,7 +294,7 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 				getOwnedSubRequirementRefs().clear();
 				return;
 			case RdalPackage.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT:
-				setRefinedRequirement((AbstractRequirement)null);
+				setRefinedRequirement((Requirement)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -324,7 +317,7 @@ public class RequirementRefinementImpl extends ElementRefinementImpl implements 
 			case RdalPackage.REQUIREMENT_REFINEMENT__SUB_REQUIREMENTS:
 				return !getSubRequirements().isEmpty();
 			case RdalPackage.REQUIREMENT_REFINEMENT__REFINED_REQUIREMENT:
-				return refinedRequirement != null;
+				return basicGetRefinedRequirement() != null;
 		}
 		return super.eIsSet(featureID);
 	}

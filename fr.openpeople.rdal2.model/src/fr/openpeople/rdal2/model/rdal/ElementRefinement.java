@@ -102,22 +102,10 @@ public interface ElementRefinement extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Refined Element</em>' reference.
-	 * @see #setRefinedElement(RefineableElement)
 	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getElementRefinement_RefinedElement()
-	 * @model required="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="group='#refinedElementEntries'"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	RefineableElement getRefinedElement();
-
-	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal2.model.rdal.ElementRefinement#getRefinedElement <em>Refined Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refined Element</em>' reference.
-	 * @see #getRefinedElement()
-	 * @generated
-	 */
-	void setRefinedElement(RefineableElement value);
 
 } // ElementRefinement

@@ -10,8 +10,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.FeatureMap;
-import fr.openpeople.rdal2.model.rdal.AbstractRequirement;
 import fr.openpeople.rdal2.model.rdal.RdalPackage;
+import fr.openpeople.rdal2.model.rdal.RefineableElement;
+import fr.openpeople.rdal2.model.rdal.Requirement;
 import fr.openpeople.rdal2.model.rdal.SubRequirementReference;
 
 /**
@@ -52,9 +53,9 @@ public class SubRequirementReferenceImpl extends SubElementReferenceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractRequirement getRequirement() {
-		AbstractRequirement requirement = basicGetRequirement();
-		return requirement != null && requirement.eIsProxy() ? (AbstractRequirement)eResolveProxy((InternalEObject)requirement) : requirement;
+	public Requirement getRequirement() {
+		Requirement requirement = basicGetRequirement();
+		return requirement != null && requirement.eIsProxy() ? (Requirement)eResolveProxy((InternalEObject)requirement) : requirement;
 	}
 
 	/**
@@ -62,8 +63,8 @@ public class SubRequirementReferenceImpl extends SubElementReferenceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractRequirement basicGetRequirement() {
-		return (AbstractRequirement)getReferencedElementEntries().get(RdalPackage.Literals.SUB_REQUIREMENT_REFERENCE__REQUIREMENT, false);
+	public Requirement basicGetRequirement() {
+		return (Requirement)getReferencedElementEntries().get(RdalPackage.Literals.SUB_REQUIREMENT_REFERENCE__REQUIREMENT, false);
 	}
 
 	/**
@@ -71,8 +72,13 @@ public class SubRequirementReferenceImpl extends SubElementReferenceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequirement(AbstractRequirement newRequirement) {
+	public void setRequirement(Requirement newRequirement) {
 		((FeatureMap.Internal)getReferencedElementEntries()).set(RdalPackage.Literals.SUB_REQUIREMENT_REFERENCE__REQUIREMENT, newRequirement);
+	}
+	
+	@Override
+	public RefineableElement basicGetReferencedElement() {
+		return basicGetRequirement();
 	}
 
 	/**
@@ -99,7 +105,7 @@ public class SubRequirementReferenceImpl extends SubElementReferenceImpl impleme
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RdalPackage.SUB_REQUIREMENT_REFERENCE__REQUIREMENT:
-				setRequirement((AbstractRequirement)newValue);
+				setRequirement((Requirement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -114,7 +120,7 @@ public class SubRequirementReferenceImpl extends SubElementReferenceImpl impleme
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case RdalPackage.SUB_REQUIREMENT_REFERENCE__REQUIREMENT:
-				setRequirement((AbstractRequirement)null);
+				setRequirement((Requirement)null);
 				return;
 		}
 		super.eUnset(featureID);

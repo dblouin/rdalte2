@@ -12,13 +12,13 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            id="fr.openpeople.rdal.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
             id="fr.openpeople.rdal2.model.rdal.presentation.RdalModelWizardID"
             name="%_UI_RdalModelWizard_label"
             class="fr.openpeople.rdal2.model.rdal.presentation.RdalModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="fr.openpeople.rdal.Wizard.category.ID"
             icon="icons/full/obj16/RdalModelFile.gif">
          <description>%_UI_RdalModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

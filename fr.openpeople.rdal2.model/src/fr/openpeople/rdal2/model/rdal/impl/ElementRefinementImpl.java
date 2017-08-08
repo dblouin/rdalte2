@@ -114,23 +114,14 @@ public abstract class ElementRefinementImpl extends IdentifiedElementImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public EList<RefineableElement> getSubElements() {
-		final Collection<RefineableElement> elements = new ArrayList<RefineableElement>();
-		
-		for ( final SubElementReference reference : getOwnedSubElementRefs() ) {
-			final RefineableElement refineableElement = reference.getReferencedElement();
-			
-			if ( refineableElement != null ) {
-				elements.add( refineableElement );
-			}
-		}
-		
-		return new EcoreEList.UnmodifiableEList<RefineableElement>( this, 
-																	RdalPackage.eINSTANCE.getElementRefinement_SubElements(),
-																	elements.size(),
-																	elements.toArray() );	
+		// TODO: implement this method to return the 'Sub Elements' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -161,16 +152,10 @@ public abstract class ElementRefinementImpl extends IdentifiedElementImpl implem
 	 * @generated
 	 */
 	public RefineableElement basicGetRefinedElement() {
-		return (RefineableElement)getRefinedElementEntries().get(RdalPackage.Literals.ELEMENT_REFINEMENT__REFINED_ELEMENT, false);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefinedElement(RefineableElement newRefinedElement) {
-		((FeatureMap.Internal)getRefinedElementEntries()).set(RdalPackage.Literals.ELEMENT_REFINEMENT__REFINED_ELEMENT, newRefinedElement);
+		// TODO: implement this method to return the 'Refined Element' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -235,9 +220,6 @@ public abstract class ElementRefinementImpl extends IdentifiedElementImpl implem
 				getOwnedSubElementRefs().clear();
 				getOwnedSubElementRefs().addAll((Collection<? extends SubElementReference>)newValue);
 				return;
-			case RdalPackage.ELEMENT_REFINEMENT__REFINED_ELEMENT:
-				setRefinedElement((RefineableElement)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -258,9 +240,6 @@ public abstract class ElementRefinementImpl extends IdentifiedElementImpl implem
 				return;
 			case RdalPackage.ELEMENT_REFINEMENT__OWNED_SUB_ELEMENT_REFS:
 				getOwnedSubElementRefs().clear();
-				return;
-			case RdalPackage.ELEMENT_REFINEMENT__REFINED_ELEMENT:
-				setRefinedElement((RefineableElement)null);
 				return;
 		}
 		super.eUnset(featureID);

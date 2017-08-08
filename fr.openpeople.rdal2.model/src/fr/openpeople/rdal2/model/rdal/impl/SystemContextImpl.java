@@ -36,6 +36,7 @@ import fr.openpeople.rdal2.model.rdal.SystemOverview;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getSystemContextBoundary <em>System Context Boundary</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getActors <em>Actors</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getSystemOverview <em>System Overview</em>}</li>
+ *   <li>{@link fr.openpeople.rdal2.model.rdal.impl.SystemContextImpl#getSystemToBe <em>System To Be</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,6 +71,16 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 	 * @ordered
 	 */
 	protected EList<ActorReference> actors;
+
+	/**
+	 * The cached value of the '{@link #getSystemToBe() <em>System To Be</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSystemToBe()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject systemToBe;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,6 +209,44 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EObject getSystemToBe() {
+		if (systemToBe != null && systemToBe.eIsProxy()) {
+			InternalEObject oldSystemToBe = (InternalEObject)systemToBe;
+			systemToBe = eResolveProxy(oldSystemToBe);
+			if (systemToBe != oldSystemToBe) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE, oldSystemToBe, systemToBe));
+			}
+		}
+		return systemToBe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetSystemToBe() {
+		return systemToBe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSystemToBe(EObject newSystemToBe) {
+		EObject oldSystemToBe = systemToBe;
+		systemToBe = newSystemToBe;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE, oldSystemToBe, systemToBe));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -254,6 +303,9 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 				return getActors();
 			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_OVERVIEW:
 				return getSystemOverview();
+			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE:
+				if (resolve) return getSystemToBe();
+				return basicGetSystemToBe();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,6 +333,9 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_OVERVIEW:
 				setSystemOverview((SystemOverview)newValue);
 				return;
+			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE:
+				setSystemToBe((EObject)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -305,6 +360,9 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_OVERVIEW:
 				setSystemOverview((SystemOverview)null);
 				return;
+			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE:
+				setSystemToBe((EObject)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -325,6 +383,8 @@ public class SystemContextImpl extends AbstractContractualElementImpl implements
 				return actors != null && !actors.isEmpty();
 			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_OVERVIEW:
 				return getSystemOverview() != null;
+			case RdalPackage.SYSTEM_CONTEXT__SYSTEM_TO_BE:
+				return systemToBe != null;
 		}
 		return super.eIsSet(featureID);
 	}

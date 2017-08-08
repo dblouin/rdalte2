@@ -28,11 +28,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedSubElementRefs" upperBound="-1"
         eType="#//SubElementReference" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinedElement" lowerBound="1"
-        eType="#//RefineableElement" volatile="true" transient="true" derived="true">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="group" value="#refinedElementEntries"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="#//RefineableElement" changeable="false" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementRefinement" eSuperTypes="#//ElementRefinement #//SatisfiableElement #//VerifiableElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedSubRequirementRefs"
@@ -46,7 +43,7 @@
         upperBound="-1" eType="#//AbstractRequirement" changeable="false" volatile="true"
         transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinedRequirement" lowerBound="1"
-        eType="#//AbstractRequirement">
+        eType="#//Requirement" volatile="true" transient="true" derived="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="group" value="#refinedElementEntries"/>
       </eAnnotations>
@@ -64,7 +61,7 @@
         upperBound="-1" eType="#//AbstractGoal" changeable="false" volatile="true"
         transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refinedGoal" lowerBound="1"
-        eType="#//AbstractGoal">
+        eType="#//AbstractGoal" volatile="true" transient="true" derived="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="group" value="#refinedElementEntries"/>
       </eAnnotations>
@@ -276,6 +273,8 @@
         eType="#//ActorReference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemOverview" eType="#//SystemOverview"
         eOpposite="#//SystemOverview/ownedContexts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemToBe" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//IdentifiedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="designVariable" lowerBound="1"
@@ -452,7 +451,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubRequirementReference" eSuperTypes="#//SubElementReference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" lowerBound="1"
-        eType="#//AbstractRequirement" volatile="true" transient="true" derived="true">
+        eType="#//Requirement" volatile="true" transient="true" derived="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="group" value="#referencedElementEntries"/>
       </eAnnotations>

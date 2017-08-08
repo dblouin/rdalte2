@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemContext#getSystemContextBoundary <em>System Context Boundary</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemContext#getActors <em>Actors</em>}</li>
  *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemContext#getSystemOverview <em>System Overview</em>}</li>
+ *   <li>{@link fr.openpeople.rdal2.model.rdal.SystemContext#getSystemToBe <em>System To Be</em>}</li>
  * </ul>
  *
  * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSystemContext()
@@ -115,5 +116,31 @@ public interface SystemContext extends AbstractContractualElement {
 	 * @generated
 	 */
 	void setSystemOverview(SystemOverview value);
+
+	/**
+	 * Returns the value of the '<em><b>System To Be</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>System To Be</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>System To Be</em>' reference.
+	 * @see #setSystemToBe(EObject)
+	 * @see fr.openpeople.rdal2.model.rdal.RdalPackage#getSystemContext_SystemToBe()
+	 * @model required="true"
+	 * @generated
+	 */
+	EObject getSystemToBe();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal2.model.rdal.SystemContext#getSystemToBe <em>System To Be</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>System To Be</em>' reference.
+	 * @see #getSystemToBe()
+	 * @generated
+	 */
+	void setSystemToBe(EObject value);
 
 } // SystemContext
