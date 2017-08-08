@@ -5,15 +5,15 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import fr.labsticc.framework.settings.model.settings.impl.AbstractEcoreModelInterface;
-import fr.tpt.useme.architecture.model.usemearch.EntityInstance;
-import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
+import fr.tpt.mem4csd.dssl.model.dssl.DsslPackage;
+import fr.tpt.mem4csd.dssl.model.dssl.EntityInstance;
 
-public class UseMeArchModelInterface extends AbstractEcoreModelInterface {
+public class DsslModelInterface extends AbstractEcoreModelInterface {
 
-	public UseMeArchModelInterface() {
-		super( UsemearchPackage.Literals.IDENTIFIED_ELEMENT );
+	public DsslModelInterface() {
+		super( DsslPackage.Literals.IDENTIFIED_ELEMENT );
 		
-		addLanguage( UsemearchPackage.eINSTANCE, UsemearchPackage.eNS_PREFIX );
+		addLanguage( DsslPackage.eINSTANCE, DsslPackage.eNS_PREFIX );
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class UseMeArchModelInterface extends AbstractEcoreModelInterface {
 
 	@Override
 	public String getLanguageName() {
-		return UsemearchPackage.eNS_PREFIX;
+		return DsslPackage.eNS_PREFIX;
 	}
 
 	@Override
