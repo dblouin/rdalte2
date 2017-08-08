@@ -3,7 +3,6 @@
 <plugin>
    <extension-point id="coverageListers" name="coverageListers" schema="schema/coverageListers.exsd"/>
    <extension-point id="editorHandlers" name="editorHandlers" schema="schema/editorHandlers.exsd"/>
-   <extension-point id="additionalAdapterFactories" name="additionalAdapterFactories" schema="schema/additionalAdapterFactories.exsd"/>
    <extension
          point="org.eclipse.ui.views">
       <category

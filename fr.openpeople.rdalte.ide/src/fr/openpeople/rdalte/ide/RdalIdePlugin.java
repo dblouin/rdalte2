@@ -17,12 +17,8 @@ import java.util.Collection;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtension;
-import org.eclipse.core.runtime.IExtensionPoint;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
-import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
@@ -30,7 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import fr.labsticc.framework.core.exception.IExceptionHandler;
 import fr.labsticc.framework.ide.util.PluginUtil;
-import fr.openpeople.rdal2.model.rdal.provider.RdalItemProviderAdapterFactory;
 import fr.openpeople.rdalte.ide.view.IEditorHandler;
 import fr.openpeople.rdalte.ide.view.traceability.navigator.ICoverageLister;
 
@@ -48,9 +43,9 @@ public class RdalIdePlugin extends AbstractUIPlugin {
 	private static final String EDITOR_HANDLER_EXT_HANDLER_ELEM = "handler";
 	private static final String EDITOR_HANDLER_EXT_HANDLER_ELEM_CLASS_ATT = "class";
 
-	private static final String ADDITIONAL_ADAPTER_FACT_EXT_ID = ".additionalAdapterFactories";
-	private static final String ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM = "factory";
-	private static final String ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT = "class";
+//	private static final String ADDITIONAL_ADAPTER_FACT_EXT_ID = ".additionalAdapterFactories";
+//	private static final String ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM = "factory";
+//	private static final String ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT = "class";
 
 	// The shared instance
 	private static RdalIdePlugin plugin;
@@ -98,25 +93,25 @@ public class RdalIdePlugin extends AbstractUIPlugin {
 
 	private void initItemProviderFactories() 
 	throws CoreException {
-		adapterFactory = new ComposedAdapterFactory();
-		adapterFactory.addAdapterFactory( new RdalItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory( new ResourceItemProviderAdapterFactory() );
-		//adapterFactory.addAdapterFactory( new EcoreItemProviderAdapterFactory() );
-
-		final IExtensionPoint point = Platform.getExtensionRegistry().getExtensionPoint( getBundle().getSymbolicName() + ADDITIONAL_ADAPTER_FACT_EXT_ID);
-
-		for (final IExtension extension : point.getExtensions() ) {
-			final IConfigurationElement[] elements = extension.getConfigurationElements();
-
-			for (final IConfigurationElement element : elements ) {
-				if ( ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM.equals(element.getName())) {
-					logger.info( "Adding adapter " + element.getAttribute( ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT ) );
-					adapterFactory.addAdapterFactory( (AdapterFactory) element.createExecutableExtension(ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT));
-				}
-			}
-		}
-
-		adapterFactory.addAdapterFactory( new ReflectiveItemProviderAdapterFactory() );
+		adapterFactory = new ComposedAdapterFactory( ComposedAdapterFactory.Descriptor.Registry.INSTANCE );
+//		adapterFactory.addAdapterFactory( new RdalItemProviderAdapterFactory());
+//		adapterFactory.addAdapterFactory( new ResourceItemProviderAdapterFactory() );
+//		//adapterFactory.addAdapterFactory( new EcoreItemProviderAdapterFactory() );
+//
+//		final IExtensionPoint point = Platform.getExtensionRegistry().getExtensionPoint( getBundle().getSymbolicName() + ADDITIONAL_ADAPTER_FACT_EXT_ID);
+//
+//		for (final IExtension extension : point.getExtensions() ) {
+//			final IConfigurationElement[] elements = extension.getConfigurationElements();
+//
+//			for (final IConfigurationElement element : elements ) {
+//				if ( ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM.equals(element.getName())) {
+//					logger.info( "Adding adapter " + element.getAttribute( ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT ) );
+//					adapterFactory.addAdapterFactory( (AdapterFactory) element.createExecutableExtension(ADDITIONAL_ADAPTER_FACT_EXT_FACTORY_ELEM_CLASS_ATT));
+//				}
+//			}
+//		}
+//
+//		adapterFactory.addAdapterFactory( new ReflectiveItemProviderAdapterFactory() );
 	}
 
 	public AdapterFactory getItemProvidersAdapterFactory() {
