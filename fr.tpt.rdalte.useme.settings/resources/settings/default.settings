@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="ASCII"?>
-<settings:SettingsSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:settings="http://www.lab-sticc.fr/framework/settings" id="rdal_dssl_urn" name="RDAL DSSL URN Settings" description="Settings for RDAL, USEME and URN.">
-  <ownedLanguages id="usemearch" name="DSSL">
-    <packages href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#/"/>
+<settings:SettingsSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:settings="http://www.lab-sticc.fr/framework/settings" id="rdal_dssl_urn" name="RDAL DSSL URN Settings" description="Settings for RDAL, DSSL and URN.">
+  <ownedLanguages id="dssl" name="DSSL">
+    <packages href="http://mem4cds.telecom-paristech.fr/languages/dssl/#/"/>
     <ownedCategoryAssociations>
       <property href="http://www.open-people.fr/rdal2#//TextualContractualElement/category"/>
-      <ownedCategories id="useme_environmental" name="Environmental" description="" subCategories="useme_technical"/>
-      <ownedCategories id="useme_technical" name="Technical" parentCategory="useme_environmental"/>
-      <ownedCategories id="useme_physical" name="Physical"/>
-      <ownedCategories id="useme_social" name="Social"/>
+      <ownedCategories id="dssl_environmental" name="Environmental" description="" subCategories="dssl_technical"/>
+      <ownedCategories id="dssl_technical" name="Technical" parentCategory="dssl_environmental"/>
+      <ownedCategories id="dssl_physical" name="Physical"/>
+      <ownedCategories id="dssl_social" name="Social"/>
     </ownedCategoryAssociations>
-    <ownedModelInterface id="fr.tpt.rdalte.useme.settings.UseMeArchModelInterface" name="DSSL Archtecture Model Interface" providerId="fr.tpt.rdalte.useme.settings" serviceClass="fr.tpt.rdalte.useme.settings.UseMeArchModelInterface"/>
-    <fileExtensions>usemearch</fileExtensions>
+    <ownedModelInterface id="fr.tpt.rdalte.useme.settings.DsslModelInterface" name="DSSL Architecture Model Interface" providerId="fr.tpt.rdalte.useme.settings" serviceClass="fr.tpt.rdalte.useme.settings.DsslModelInterface"/>
+    <fileExtensions>dssl</fileExtensions>
   </ownedLanguages>
   <ownedLanguages id="RDAL" name="RDAL" description="">
     <packages href="http://www.open-people.fr/rdal2#/"/>
@@ -43,72 +43,76 @@
         <associatedTypes href="http:///urncore.ecore#//Responsibility"/>
       </ownedPropToTypesAssociations>
     </ownedLanguageAssociations>
-    <ownedLanguageAssociations id="RDAL-DSSL" name="RDAL-DSSL" description="" targetLanguage="usemearch">
+    <ownedLanguageAssociations id="RDAL-DSSL" name="RDAL-DSSL" description="" targetLanguage="dssl">
       <ownedPropToTypesAssociations id="Specification.designElements.ownedDesignElementRefs.designElement" name="Specification.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//DslBasedSystemSpecification"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//DslBasedSystemSpecification"/>
         <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Specification ) else self.oclIsKindOf( rdal::Specification ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemOverview.designElements.ownedDesignElementRefs.designElement" name="SystemOverview.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
         <ownedCondition id="SystemOverview.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Overview" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemOverview ) else self.oclIsKindOf( rdal::SystemOverview ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemContext.designElements.ownedDesignElementRefs.designElement" name="SystemContext.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
         <ownedCondition id="SystemContext.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL System Context" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::SystemContext ) else self.oclIsKindOf( rdal::SystemContext ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemOverview.globalSystem" name="SystemOverview.globalSystem">
         <property href="http://www.open-people.fr/rdal2#//SystemOverview/globalSystem"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemOverview.systemToBe" name="SystemOverview.systemToBe">
         <property href="http://www.open-people.fr/rdal2#//SystemOverview/systemToBe"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Dsl"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//Dsl"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="SystemContext.globalSystemContext" name="SystemContext.globalSystemContext">
         <property href="http://www.open-people.fr/rdal2#//SystemContext/globalSystemContext"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//ContextSpecification"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//ContextSpecification"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="ActorReference.referencedActors.aadl" name="ActorReference.referencedActors">
         <property href="http://www.open-people.fr/rdal2#//ActorReference/referencedActors"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="Variable.designVariable" name="Variable.designVariable">
         <property href="http://www.open-people.fr/rdal2#//Variable/designVariable"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//InteractionFeature"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="" name="NonFunctionalProperty.designProperty" description="TODO">
         <property href="http://www.open-people.fr/rdal2#//NonFunctionalProperty/designProperty"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="Requirement.designElements.ownedDesignElementRefs.designElement" name="Requirement.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
         <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Requirement ) else self.oclIsKindOf( rdal::Requirement ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="Assumption.designElements.ownedDesignElementRefs.designElement" name="Assumption.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
         <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::Assumption ) else self.oclIsKindOf( rdal::Assumption ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
       </ownedPropToTypesAssociations>
       <ownedPropToTypesAssociations id="AbstractGoal.designElements.ownedDesignElementRefs.designElement" name="AbstractGoal.designElements.ownedDesignElementRefs.designElement">
         <property href="http://www.open-people.fr/rdal2#//DesignElementReference/designElement"/>
-        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//IdentifiedElement"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//IdentifiedElement"/>
         <ownedCondition id="Specification.designElements.ownedDesignElementRefs.designElement.condition" description="The container of the design elements reference is a RDAL Specification" text="if self.oclIsKindOf( rdal::DesignElementReference ) then self.oclAsType( rdal::DesignElementReference ).parentTraceableElement.oclIsKindOf( rdal::AbstractGoal ) else self.oclIsKindOf( rdal::AbstractGoal ) endif">
           <language xsi:type="cst:FormalConstraintLanguage" href="defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         </ownedCondition>
+      </ownedPropToTypesAssociations>
+      <ownedPropToTypesAssociations id="SystemContext.systemToBe" name="SystemContext.systemToBe">
+        <property href="http://www.open-people.fr/rdal2#//SystemContext/systemToBe"/>
+        <associatedTypes href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//EntityInstance"/>
       </ownedPropToTypesAssociations>
     </ownedLanguageAssociations>
     <ownedLanguageAssociations id="RDAL-Ecore" name="RDAL-Ecore" targetLanguage="Ecore">
