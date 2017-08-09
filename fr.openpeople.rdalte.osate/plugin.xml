@@ -78,15 +78,6 @@
       </provider>
    </extension>
    <extension
-         point="fr.openpeople.rdalte.ide.additionalAdapterFactories">
-      <factory
-            class="org.osate.aadl2.provider.Aadl2ItemProviderAdapterFactory">
-      </factory>
-      <factory
-            class="org.osate.aadl2.instance.provider.InstanceItemProviderAdapterFactory">
-      </factory>
-   </extension>
-   <extension
          point="fr.openpeople.rdalte.ide.editorHandlers">
       <handler
             class="fr.openpeople.rdalte.ide.osate.OsateEditorsHandler">
