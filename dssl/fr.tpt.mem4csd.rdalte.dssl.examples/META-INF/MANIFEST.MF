@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RDALTE USE-ME Examples
+Bundle-SymbolicName: fr.tpt.mem4csd.rdalte.dssl.examples;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: https://mem4csd.telecom-paristech.fr/blog/
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: fr.labsticc.framework.ide.wizard,
+ org.eclipse.jface.wizard,
+ org.eclipse.swt
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui
+Bundle-ActivationPolicy: lazy

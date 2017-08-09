@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.tpt.mem4csd.rdalte.dssl"
+      label="RDALTE DSSL USEME Integration"
+      version="1.0.0.qualifier"
+      provider-name="https://mem4csd.telecom-paristech.fr/blog/">
+
+   <description url="https://mem4csd.telecom-paristech.fr/blog/index.php/rdal/">
+   TODO
+   </description>
+
+   <license url="">
+      TODO
+   </license>
+
+   <requires>
+      <import feature="fr.openpeople.rdalte" version="1.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="fr.tpt.mem4csd.rdalte.dssl.settings"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="fr.tpt.mem4csd.rdalte.dssl.examples"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
