@@ -17,11 +17,11 @@
    </license>
 
    <includes
-         id="fr.tpt.rdalte.useme"
+         id="fr.tpt.mem4csd.rdalte.dssl"
          version="0.0.0"/>
 
    <includes
-         id="fr.tpt.rdalte.useme.source"
+         id="fr.tpt.mem4csd.rdalte.dssl.source"
          version="0.0.0"/>
 
 </feature>

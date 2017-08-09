@@ -4,16 +4,16 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="fr.tpt.rdalte.useme.examples.category"
+            id="fr.tpt.mem4csd.rdalte.dssl.examples.category"
             name="%exampleCategoryName"
             parentCategory="org.eclipse.ui.Examples">
       </category>
       <wizard
             canFinishEarly="true"
-            category="org.eclipse.ui.Examples/fr.tpt.rdalte.useme.examples.category"
+            category="org.eclipse.ui.Examples/fr.tpt.mem4csd.rdalte.dssl.examples.category"
             class="fr.tpt.mem4csd.rdalte.dssl.examples.GyroExamplesWizard"
             hasPages="false"
-            id="fr.tpt.rdalte.useme.examples.GyroExamplesWizard"
+            id="fr.tpt.mem4csd.rdalte.dssl.examples.GyroExamplesWizard"
             name="%exampleWizardNameGyro"
             project="true">
          <description>
