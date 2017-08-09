@@ -22,7 +22,7 @@ public class RDALNature implements IProjectNature {
 	/**
 	 * ID of this project nature
 	 */
-	public static final String NATURE_ID = "fr.openpeople.rdal.ide.rdalNature";
+	public static final String NATURE_ID = "fr.openpeople.rdalte.ide.rdalNature";
 
 	private IProject project;
 

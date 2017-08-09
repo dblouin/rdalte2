@@ -52,9 +52,9 @@ import fr.openpeople.rdalte.service.IContractualElementTraceabilityBusinessDeleg
 
 public class RDALBuilder extends IncrementalProjectBuilder {
 	
-	public static final String BUILDER_ID = "fr.openpeople.rdal.ide.rdalBuilder";
+	public static final String BUILDER_ID = "fr.openpeople.rdalte.ide.rdalBuilder";
 
-	private static final String MARKER_TYPE = EValidator.MARKER;//"fr.openpeople.rdal.ide.rdalSatisfactionProblem";
+	private static final String MARKER_TYPE = EValidator.MARKER;//"fr.openpeople.rdalte.ide.rdalSatisfactionProblem";
 	
 	//private final IRequirementsTraceabilityBusinessDelegate delegate;
 	private final IExceptionHandler exceptionHandler;
