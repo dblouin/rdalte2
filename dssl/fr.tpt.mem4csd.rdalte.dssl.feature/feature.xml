@@ -6,7 +6,7 @@
       provider-name="https://mem4csd.telecom-paristech.fr/blog/">
 
    <description url="https://mem4csd.telecom-paristech.fr/blog/index.php/rdal/">
-   TODO
+      TODO
    </description>
 
    <license url="">
@@ -15,6 +15,7 @@
 
    <requires>
       <import feature="fr.openpeople.rdalte" version="1.0.0.qualifier"/>
+      <import feature="fr.tpt.mem4csd.dssl.model" version="1.0.0.qualifier"/>
    </requires>
 
    <plugin
