@@ -1,0 +1,13 @@
+package diagram::description
+
+context Layer def : nodeMappingForClass( theClass : ecore::EClassifier ) :
+	NodeMapping = 	if theClass = null then
+						null
+					else
+						self.nodeMappings->any( mapping | mapping.domainClass = theClass.name )
+					endif
+
+context Layer def : metamodels() :
+	OrderedSet( ecore::EPackage ) = self.oclAsType( ecore::EObject ).eContainer().oclAsType( viewpoint::description::RepresentationDescription ).metamodel
+
+endpackage

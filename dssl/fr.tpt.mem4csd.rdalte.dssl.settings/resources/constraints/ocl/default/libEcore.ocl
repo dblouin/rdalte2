@@ -1,0 +1,9 @@
+package ecore
+
+context ecore::EClassifier def : hasAnnotationValue( annName : String, entryKey : String, annValue : String ) :
+	Boolean = self.getEAnnotation( annName )->exists( eld | eld.details->select( elk | elk.key = entryKey )->exists( elv | elv.value = annValue ) )
+
+context EPackage def : annotatedClassifiers( annName : String, entryKey : String, entryValue : String ) :
+	OrderedSet( EClassifier ) = self.eClassifiers->select( cl | cl.hasAnnotationValue( annName, entryKey, entryValue ) )->asOrderedSet()
+
+endpackage

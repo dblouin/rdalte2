@@ -1,0 +1,6 @@
+package dssl
+
+context ecore::EClassifier def : hasRole( role : String ) :
+	Boolean = self.hasAnnotationValue( 'dssl.abstract_syntax', 'role', role )
+
+endpackage
